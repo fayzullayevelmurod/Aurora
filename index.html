@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>Aurora</title>
     <!-- Swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- css file -->
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- bootstrap -->
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <!-- fonts -->
     <!-- css link -->
     <link rel="stylesheet" href="./css/style.css">
@@ -24,7 +21,137 @@
 
         <!-- header -->
         <header>
-
+            <div class="header_container">
+                <div class="header_top">
+                    <div class="header_top_left">
+                        <a href="/" class="header_logo">
+                            <img src="./images/logo/header_logo.svg" alt="">
+                        </a>
+                        <a class="header_location" href="#">
+                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7396 1.54038C15.8408 1.49479 15.9024 1.49816 15.9269 1.5022C15.9535 1.50659 15.9676 1.51651 15.9755 1.52448C15.9835 1.53244 15.9934 1.54651 15.9978 1.57314C16.0018 1.59763 16.0052 1.65918 15.9596 1.76037L9.47665 16.1514C9.38678 16.3509 9.16593 16.4949 8.8879 16.4999C8.60076 16.505 8.54051 16.3783 8.52974 16.3427C8.02469 14.6724 7.23408 12.724 6.00505 11.4949C4.77602 10.2659 2.82762 9.47531 1.15731 8.97027C1.12166 8.95949 0.994979 8.89924 1.00012 8.6121C1.00509 8.33407 1.14909 8.11322 1.3486 8.02334L15.7396 1.54038Z" stroke="#1C1C1C" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>                                
+                            <span>
+                                Челябинск
+                            </span>
+                        </a>
+                    </div>
+                    <form action="#" class="header_top_center">
+                        <input type="search" id="search" placeholder="Найти" autocomplete="off">
+                        <button class="header_select">
+                            <span>
+                                Каталог
+                            </span>
+                            <img src="./images/icons/down_icon.svg" alt="">
+                        </button>
+                        <label for="search" class="search_btn">
+                            <img src="./images/icons/search_icon.svg" alt="">
+                        </label>
+                    </form>
+                    <div class="header_top_right">
+                        <button class="phone_select">
+                            <a href="tel:+78000000000">
+                                +7 (800) 000 00 00
+                            </a>
+                            <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z" fill="#1C1C1C"/>
+                            </svg>
+                        </button>
+                        <button class="modal_btn">
+                            Заказать звонок 
+                        </button>
+                    </div>
+                </div>
+                <div class="header_bottom">
+                    <nav>
+                        <ul class="nav_link">
+                            <button class="catalog_btn">
+                                Каталог
+                            </button>
+                            <li class="nav_item">
+                                <a href="#">
+                                    Акции
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="#">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="#">
+                                    Информация
+                                    <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z" fill="#1C1C1C"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="#">
+                                    Компания
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="header_bottom_right">
+                        <li>
+                            <a href="#">
+                                <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 13C12.3137 13 15 10.3137 15 7C15 3.68629 12.3137 1 9 1C5.68629 1 3 3.68629 3 7C3 10.3137 5.68629 13 9 13ZM9 13C4.58172 13 1 16.5817 1 21M9 13C13.4183 13 17 16.5817 17 21" stroke="#1C1C1C" stroke-width="2"/>
+                                </svg>                                    
+                                <span>
+                                    Войти
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="black"/>
+                                </svg>
+                                <div class="circle">
+                                    <p>
+                                        99
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="14" height="2" fill="black"/>
+                                    <rect width="9" height="2" transform="matrix(1 0 0 -1 0 9)" fill="black"/>
+                                    <rect width="8" height="2" transform="matrix(1 0 0 -1 11 9)" fill="black"/>
+                                    <rect width="8" height="2" transform="matrix(-4.37114e-08 1 1 4.37114e-08 14 4)" fill="black"/>
+                                    <rect y="14" width="14" height="2" fill="black"/>
+                                </svg>
+                                <div class="circle">
+                                    <p>
+                                        99
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.144047 0.810364C0.406634 0.416484 0.938806 0.31005 1.33269 0.572636L6.47552 4.00119C6.65823 4.123 6.78723 4.31029 6.83589 4.52442L9.54139 16.4286H19.6444L20.4847 13.5715H12.2857C11.8123 13.5715 11.4285 13.1877 11.4285 12.7143C11.4285 12.241 11.8123 11.8572 12.2857 11.8572H20.9889L21.9973 8.42865H12.2858C11.8124 8.42865 11.4286 8.04489 11.4286 7.57151C11.4286 7.09812 11.8124 6.71437 12.2858 6.71437H23.1429C23.413 6.71437 23.6673 6.84171 23.8291 7.058C23.991 7.27429 24.0414 7.55421 23.9652 7.81336L21.108 17.5276C21.0007 17.8924 20.666 18.1429 20.2857 18.1429H8.8572C8.457 18.1429 8.11006 17.866 8.02137 17.4757L5.24004 5.23785L0.381775 1.999C-0.012105 1.73642 -0.118539 1.20424 0.144047 0.810364ZM11.7142 21.5715C11.7142 22.676 10.8188 23.5714 9.71425 23.5714C8.60968 23.5714 7.71425 22.676 7.71425 21.5715C7.71425 20.4669 8.60968 19.5715 9.71425 19.5715C10.8188 19.5715 11.7142 20.4669 11.7142 21.5715ZM21.4285 21.5715C21.4285 22.676 20.5331 23.5714 19.4285 23.5714C18.3239 23.5714 17.4285 22.676 17.4285 21.5715C17.4285 20.4669 18.3239 19.5715 19.4285 19.5715C20.5331 19.5715 21.4285 20.4669 21.4285 21.5715Z" fill="#1C1C1C"/>
+                                </svg>
+                                <div class="circle">
+                                    <p>
+                                        99
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
         <!-- header -->
 
@@ -43,9 +170,6 @@
         <!-- footer -->
     </div>
     
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- bootstrap -->
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Swiper js -->
