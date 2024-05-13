@@ -151,7 +151,7 @@ header .header_top_center {
   gap: 16px;
   border: 1px solid #dee2e7;
   border-radius: 8px;
-  padding: 12px 0 16px 12px;
+  padding: 12px 0 12px 12px;
 }
 header .header_top_center input {
   width: 100%;
