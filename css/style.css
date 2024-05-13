@@ -27,6 +27,8 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-style: normal;
+  padding-bottom: 400px;
+  color: #1c1c1c;
 }
 
 input {
@@ -249,6 +251,24 @@ header .header_bottom_right a p {
   color: #fff;
 }
 
+.swiper-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.swiper-btns > button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .hero {
   background: url(../images/home_slider_bg1.png) no-repeat;
   background-size: cover;
@@ -302,22 +322,7 @@ header .header_bottom_right a p {
   background: #fff;
 }
 .hero .swiper-btns {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   margin-left: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.hero .swiper-btns > button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 .hero .swiper-pagination {
   width: -moz-fit-content;
@@ -340,4 +345,55 @@ header .header_bottom_right a p {
   width: 738px;
   height: 497.84px;
   z-index: -1;
+}
+
+.special__offers .title {
+  padding-bottom: 32px;
+}
+.special__offers .swiper-wrapper {
+  align-items: stretch;
+}
+.special__offers .swiper-wrapper .swiper-slide {
+  height: unset;
+}
+.special__offers .swiper-btns {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 0 32px;
+}
+.special__offers .swiper-btns > button {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.special__offers .card {
+  position: relative;
+  border: 1px solid #f7fafc;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  padding: 24px;
+  background: #f7fafc;
+  border-radius: 10px;
+  text-align: center;
+  height: 100%;
+}
+.special__offers .card .status__box {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: #0d6efd;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #fff;
+}
+.special__offers .card .desc {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-top: 54px;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

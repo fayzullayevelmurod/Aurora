@@ -59,6 +59,8 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-style: normal;
+  padding-bottom: 400px;
+  color: #1c1c1c;
 }
 
 input {
@@ -312,6 +314,19 @@ header {
 // header
 
 // hero
+.swiper-btns {
+  @include flex-center;
+  gap: 12px;
+  width: fit-content;
+  & > button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    @include flex-full-center;
+    cursor: pointer;
+  }
+}
 .hero {
   background: url(../images/home_slider_bg1.png) no-repeat;
   background-size: cover;
@@ -363,18 +378,7 @@ header {
     background: #fff;
   }
   .swiper-btns {
-    @include flex-center;
-    gap: 12px;
     margin-left: auto;
-    width: fit-content;
-    & > button {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #fff;
-      @include flex-full-center;
-      cursor: pointer;
-    }
   }
   .swiper-pagination {
     width: fit-content;
@@ -401,4 +405,59 @@ header {
 }
 // hero
 
+// special__offers
+.special__offers {
+  .title {
+    padding-bottom: 32px;
+  }
+  .swiper-wrapper {
+    align-items: stretch;
+    .swiper-slide {
+      height: unset;
+    }
+  }
+  .swiper-btns {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 0 32px;
+    & > button {
+      box-shadow: 0px 0px 4px 0px #00000040;
+    }
+  }
+  .card {
+    position: relative;
+    border: 1px solid #f7fafc;
+    box-shadow: 0px 0px 4px 0px #00000026;
+    padding: 24px;
+    background: #f7fafc;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+
+    .status__box {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      background: #0d6efd;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      color: #fff;
+    }
+    .desc {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      padding-top: 54px;
+      text-align: left;
+    }
+  }
+}
+// special__offers
 @import "./responsive";
