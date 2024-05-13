@@ -86,6 +86,11 @@ address {
   color: #1c1c1c;
   width: -moz-fit-content;
   width: fit-content;
+  transition: 0.3s ease;
+}
+.white__btn:hover {
+  border-color: transparent;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 .green__btn {
@@ -98,6 +103,10 @@ address {
   color: #fff;
   width: -moz-fit-content;
   width: fit-content;
+  transition: 0.3s ease;
+}
+.green__btn:hover {
+  background: #00c719;
 }
 
 header {
@@ -353,6 +362,9 @@ header .header_bottom_right a p {
   border-radius: 8px;
   background: #0d6efd;
 }
+.hero__blue-btn:hover {
+  background: linear-gradient(96.14deg, #127fff 0%, #69a6ff 100%);
+}
 .hero .swiper-btns {
   margin-left: auto;
 }
@@ -518,29 +530,73 @@ header .header_bottom_right a p {
   height: 100%;
   padding: 30px 24px 24px 24px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  transition: 0.3s ease;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.products .products__boxes .product__box img {
-  width: 100%;
+.products .products__boxes .product__box:hover {
+  background: #0859d0;
+}
+.products .products__boxes .product__box:hover .product__img {
+  transform: scale(0.9);
+}
+.products .products__boxes .product__box:hover .product__desc {
+  color: #fff;
+}
+.products .products__boxes .product__box:hover .product__box-bg {
+  opacity: 1;
+}
+.products .products__boxes .product__box .product__img {
+  transition: 0.3s ease;
   -o-object-fit: contain;
      object-fit: contain;
-  height: 156px;
   display: block;
   margin: 0 auto;
+}
+.products .products__boxes .product__box-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transition: 0.3s ease;
 }
 .products .products__boxes .product__desc {
   font-size: 20px;
   font-weight: 600;
   line-height: 30px;
   padding-top: 54px;
+  transition: 0.3s ease;
 }
 
 .history__brand {
   color: #fff;
 }
 .history__brand .main_container {
-  background: url(../images/history-bg.png) no-repeat;
-  background-size: cover;
+  position: relative;
+}
+.history__brand .main_container .history__brand-bg {
   border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+  transition: all 0.2s linear;
+}
+.history__brand .main_container .history__brand-bg.show {
+  display: block;
 }
 .history__brand .container {
   position: relative;
@@ -554,6 +610,15 @@ header .header_bottom_right a p {
   width: 588.49px;
   height: 90px;
   z-index: -1;
+  transform: translateX(200%);
+  transition: 0.3s ease;
+}
+.history__brand .aurora__logo.show {
+  transform: translateX(0);
+}
+.history__brand .riland__logo {
+  width: 221px;
+  height: 45px;
 }
 .history__brand .company__name {
   position: absolute;
@@ -563,10 +628,14 @@ header .header_bottom_right a p {
   font-weight: 900;
   line-height: 93px;
   text-transform: uppercase;
+  transform: translateY(100%);
+  transition: 0.3s ease;
+}
+.history__brand .company__name.show {
+  transform: translateY(0);
 }
 .history__brand-content {
   max-width: 992px;
-  display: flex;
   flex-direction: column;
   gap: 32px;
   padding-top: 16px;
@@ -575,22 +644,45 @@ header .header_bottom_right a p {
   display: flex;
   align-items: center;
   gap: 32px;
+  padding-bottom: 32px;
 }
 .history__brand .tab__header-items h5 {
   font-size: 32px;
   font-weight: 600;
   line-height: 48px;
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.history__brand .tab__header-items h5:hover {
   opacity: 0.5;
 }
 .history__brand .tab__header-items h5.active {
-  opacity: 1;
+  opacity: 0.5;
 }
 .history__brand .desc {
   font-size: 24px;
   font-weight: 400;
   line-height: 36px;
 }
+.history__brand .tab__content {
+  flex-direction: column;
+  gap: 32px;
+  display: none;
+  animation: fade 0.3s linear;
+}
+.history__brand .tab__content.show {
+  display: flex;
+}
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .watche__product {
   padding: 64px 0;
 }
