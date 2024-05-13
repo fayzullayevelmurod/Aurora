@@ -78,7 +78,11 @@ button {
 address {
   font-style: normal;
 }
-
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 72px;
+}
 .wrapper {
   width: 100%;
   overflow: hidden;
@@ -99,7 +103,28 @@ address {
   max-width: 1500px;
   margin: 0 auto;
 }
-
+.white__btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #dee2e7;
+  box-shadow: 0px 0px 8px 0px #00000000;
+  background: #fff;
+  color: #1c1c1c;
+  width: fit-content;
+}
+.green__btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #00b517;
+  color: #fff;
+  width: fit-content;
+}
 // header
 header {
   padding: 24px 0;
@@ -368,15 +393,6 @@ header {
     border-radius: 8px;
     background: #0d6efd;
   }
-  &__white-btn {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #1c1c1c;
-    padding: 12px 20px;
-    border-radius: 8px;
-    background: #fff;
-  }
   .swiper-btns {
     margin-left: auto;
   }
@@ -458,6 +474,173 @@ header {
       text-align: left;
     }
   }
+  .offers__cards {
+    max-width: 992px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 64px 0;
+  }
+  .offers__card {
+    border: 1px solid #dee2e7;
+    background: #ffffffbf;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 1 400px;
+
+    &-icon {
+      background: #0d6efd;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      @include flex-full-center();
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+    &-desc {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+  }
 }
 // special__offers
+
+// help__choos
+.help__choos {
+  color: #fff;
+
+  .main_container {
+    background: url(../images/home_slider_bg2.png) no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  .container {
+    padding: 48px 0;
+    position: relative;
+  }
+  .operator__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 737.54px;
+    height: 837.22px;
+    z-index: 1;
+  }
+  &-content {
+    max-width: 738px;
+    width: 100%;
+  }
+  .choos__bts {
+    @include flex-center();
+    gap: 24px;
+  }
+  .desc {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    padding: 24px 0 32px 0;
+  }
+}
+// help__choos
+
+// products
+.products {
+  padding: 64px 0;
+  .products__boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+    gap: 24px;
+    padding-top: 32px;
+
+    .product__box {
+      background: #f7fafc;
+      box-shadow: 0px 0px 4px 0px #00000026;
+      border-radius: 10px;
+      height: 100%;
+      padding: 30px 24px 24px 24px;
+      box-shadow: 0px 0px 4px 0px #00000026;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+        height: 156px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .product__desc {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      padding-top: 54px;
+    }
+  }
+}
+// products
+
+// history__brand
+.history__brand {
+  color: #fff;
+  .main_container {
+    background: url(../images/history-bg.png) no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  .container {
+    position: relative;
+    padding: 64px 0;
+    z-index: 1;
+  }
+  .aurora__logo {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 588.49px;
+    height: 90px;
+    z-index: -1;
+  }
+  .company__name {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 128px;
+    font-weight: 900;
+    line-height: 93px;
+    text-transform: uppercase;
+  }
+  &-content {
+    max-width: 992px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 16px;
+  }
+  .tab__header-items {
+    @include flex-center();
+    gap: 32px;
+    h5 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 48px;
+      opacity: 0.5;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  .desc {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+}
+// history__brand
+
 @import "./responsive";

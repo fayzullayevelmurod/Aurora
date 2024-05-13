@@ -47,6 +47,12 @@ address {
   font-style: normal;
 }
 
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 72px;
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden;
@@ -67,6 +73,32 @@ address {
 .container {
   max-width: 1500px;
   margin: 0 auto;
+}
+
+.white__btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #dee2e7;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0);
+  background: #fff;
+  color: #1c1c1c;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.green__btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #00b517;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 header {
@@ -312,15 +344,6 @@ header .header_bottom_right a p {
   border-radius: 8px;
   background: #0d6efd;
 }
-.hero__white-btn {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #1c1c1c;
-  padding: 12px 20px;
-  border-radius: 8px;
-  background: #fff;
-}
 .hero .swiper-btns {
   margin-left: auto;
 }
@@ -396,4 +419,165 @@ header .header_bottom_right a p {
   line-height: 30px;
   padding-top: 54px;
   text-align: left;
+}
+.special__offers .offers__cards {
+  max-width: 992px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 64px 0;
+}
+.special__offers .offers__card {
+  border: 1px solid #dee2e7;
+  background: rgba(255, 255, 255, 0.7490196078);
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 400px;
+}
+.special__offers .offers__card-icon {
+  background: #0d6efd;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.special__offers .offers__card-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.special__offers .offers__card-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.help__choos {
+  color: #fff;
+}
+.help__choos .main_container {
+  background: url(../images/home_slider_bg2.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.help__choos .container {
+  padding: 48px 0;
+  position: relative;
+}
+.help__choos .operator__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 737.54px;
+  height: 837.22px;
+  z-index: 1;
+}
+.help__choos-content {
+  max-width: 738px;
+  width: 100%;
+}
+.help__choos .choos__bts {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.help__choos .desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  padding: 24px 0 32px 0;
+}
+
+.products {
+  padding: 64px 0;
+}
+.products .products__boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+  gap: 24px;
+  padding-top: 32px;
+}
+.products .products__boxes .product__box {
+  background: #f7fafc;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 10px;
+  height: 100%;
+  padding: 30px 24px 24px 24px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.products .products__boxes .product__box img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 156px;
+  display: block;
+  margin: 0 auto;
+}
+.products .products__boxes .product__desc {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-top: 54px;
+}
+
+.history__brand {
+  color: #fff;
+}
+.history__brand .main_container {
+  background: url(../images/history-bg.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.history__brand .container {
+  position: relative;
+  padding: 64px 0;
+  z-index: 1;
+}
+.history__brand .aurora__logo {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 588.49px;
+  height: 90px;
+  z-index: -1;
+}
+.history__brand .company__name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 128px;
+  font-weight: 900;
+  line-height: 93px;
+  text-transform: uppercase;
+}
+.history__brand-content {
+  max-width: 992px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 16px;
+}
+.history__brand .tab__header-items {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.history__brand .tab__header-items h5 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  opacity: 0.5;
+}
+.history__brand .tab__header-items h5.active {
+  opacity: 1;
+}
+.history__brand .desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
 }/*# sourceMappingURL=style.css.map */
