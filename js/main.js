@@ -24,3 +24,15 @@ var swiper = new Swiper(".product__swiper", {
   spaceBetween: 32,
   speed: 600,
 });
+
+// watche__product-swiper
+var swiper = new Swiper(".watche__product-swiper", {
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+  loop: true,
+  slidesPerView: 6,
+  spaceBetween: 24,
+  speed: 600,
+});
