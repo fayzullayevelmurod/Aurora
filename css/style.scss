@@ -801,6 +801,8 @@ header {
   &-content {
     max-width: 738px;
     width: 100%;
+    position: relative;
+    z-index: 3;
   }
   .choos__bts {
     @include flex-center();

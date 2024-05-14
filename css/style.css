@@ -727,6 +727,8 @@ header .meida__header .header_bottom_right li {
 .help__choos-content {
   max-width: 738px;
   width: 100%;
+  position: relative;
+  z-index: 3;
 }
 .help__choos .choos__bts {
   display: flex;
