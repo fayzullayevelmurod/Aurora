@@ -278,10 +278,15 @@ header {
       }
     }
   }
-
+  .menu__icon {
+    display: none;
+  }
   .header_bottom {
     @include flex-center();
     justify-content: space-between;
+    .phone__icon {
+      display: none;
+    }
   }
 
   .nav_link {
@@ -454,8 +459,16 @@ header {
 
 // special__offers
 .special__offers {
-  .title {
+  .title__box {
     padding-bottom: 32px;
+    @include flex-center();
+    justify-content: space-between;
+    .swiper-btns {
+      display: none;
+    }
+  }
+  .swiper-scrollbar {
+    display: none;
   }
   .swiper-wrapper {
     align-items: stretch;
@@ -463,16 +476,18 @@ header {
       height: unset;
     }
   }
-  .swiper-btns {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    justify-content: space-between;
-    z-index: 1;
-    padding: 0 32px;
-    & > button {
-      box-shadow: 0px 0px 4px 0px #00000040;
+  .swiper {
+    .swiper-btns {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      justify-content: space-between;
+      z-index: 1;
+      padding: 0 32px;
+      & > button {
+        box-shadow: 0px 0px 4px 0px #00000040;
+      }
     }
   }
   .card {

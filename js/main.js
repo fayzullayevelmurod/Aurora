@@ -11,6 +11,10 @@ var swiper = new Swiper(".hero__swiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   speed: 600,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
 });
 
 // product__swiper
@@ -23,6 +27,21 @@ var swiper = new Swiper(".product__swiper", {
   slidesPerView: 4,
   spaceBetween: 32,
   speed: 600,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 32,
+    },
+    744: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      loop: false,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+      },
+    },
+  },
 });
 
 // watche__product-swiper
