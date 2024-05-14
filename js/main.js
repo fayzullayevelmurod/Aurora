@@ -93,8 +93,8 @@ var swiper = new Swiper(".watche__product-swiper", {
 // products__swiper
 var swiper = new Swiper(".products__swiper", {
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: ".button-next7",
+    prevEl: ".button-prev7",
   },
   loop: true,
   slidesPerView: 4,

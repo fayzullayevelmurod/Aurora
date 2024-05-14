@@ -264,7 +264,11 @@ header .nav_link a {
   color: #1c1c1c;
   display: flex;
   align-items: center;
+  transition: 0.3s ease;
   gap: 8px;
+}
+header .nav_link a:hover {
+  color: #0d6efd;
 }
 header .header_bottom_right {
   display: flex;
@@ -300,6 +304,15 @@ header .header_bottom_right a p {
   font-weight: 400;
   line-height: 12px;
   color: #fff;
+}
+header .header_bottom_right .user__box {
+  transition: 0.3s ease;
+}
+header .header_bottom_right .user__box:hover span {
+  color: #0d6efd;
+}
+header .header_bottom_right .user__box:hover svg path {
+  stroke: #0859d0;
 }
 header .meida__header {
   position: fixed;
@@ -822,6 +835,7 @@ header .meida__header .header_bottom_right li {
 }
 .history__brand .main_container {
   position: relative;
+  overflow: hidden;
 }
 .history__brand .main_container .history__brand-bg {
   border-radius: 10px;
