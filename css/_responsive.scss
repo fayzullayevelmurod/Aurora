@@ -345,11 +345,92 @@
     flex-direction: column;
     row-gap: 24px;
     align-items: start;
+    width: fit-content;
   }
   .hero__desc {
     margin: 24px 0 114px 0;
   }
   .hero__content {
     padding-bottom: 0;
+  }
+  .hero__swiper {
+    position: relative;
+  }
+  .hero .swiper-btns {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    z-index: 2;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .special__offers .card {
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .special__offers .offers__cards {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 48px;
+  }
+  .help__choos .desc {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .help__choos .operator__img {
+    display: none;
+  }
+  .help__choos .media__operator-img {
+    display: block;
+    z-index: -1;
+    width: 267.72px;
+    height: 478px;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+  }
+  .help__choos .container {
+    position: unset;
+  }
+  .help__choos .main_container {
+    z-index: 2;
+    position: relative;
+  }
+  .help__choos .choos__bts {
+    flex-direction: column;
+    row-gap: 24px;
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .history__brand .title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .history__brand .company__name {
+    font-size: 32px;
+    line-height: 48px;
+    bottom: -13px;
+  }
+  .footer__bottom .right__box {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer .number__box a {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .footer .row {
+    gap: 12px;
+  }
+  .hero .builder__img {
+    width: 312px;
+    height: 210.47px;
+    right: 24px;
   }
 }

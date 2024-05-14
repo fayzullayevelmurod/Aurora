@@ -625,6 +625,9 @@ header {
     height: 837.22px;
     z-index: 1;
   }
+  .media__operator-img {
+    display: none;
+  }
   &-content {
     max-width: 738px;
     width: 100%;

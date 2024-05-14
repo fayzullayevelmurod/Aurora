@@ -27,6 +27,10 @@ var swiper = new Swiper(".product__swiper", {
   slidesPerView: 4,
   spaceBetween: 32,
   speed: 600,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
   breakpoints: {
     1024: {
       slidesPerView: 4,
@@ -36,10 +40,10 @@ var swiper = new Swiper(".product__swiper", {
       slidesPerView: 2,
       spaceBetween: 24,
       loop: false,
-      scrollbar: {
-        el: ".swiper-scrollbar",
-        draggable: true,
-      },
+    },
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 32,
     },
   },
 });
@@ -65,6 +69,12 @@ var swiper = new Swiper(".watche__product-swiper", {
     },
     744: {
       slidesPerView: 3,
+      spaceBetween: 24,
+      loop: false,
+      allowTouchMove: true,
+    },
+    0: {
+      slidesPerView: 1,
       spaceBetween: 24,
       loop: false,
       allowTouchMove: true,
@@ -97,6 +107,11 @@ var swiper = new Swiper(".products__swiper", {
       spaceBetween: 24,
       loop: false,
       allowTouchMove: true,
+    },
+    0: {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 24,
     },
   },
 });
