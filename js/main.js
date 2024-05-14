@@ -152,11 +152,25 @@ tabItems.forEach((btn, idx) => {
 // accordion
 const accordion = document.querySelectorAll(".accordion");
 accordion.forEach((item) => {
-  const accordionHeader = item.querySelector(".footer__title-box");
-  const accordionContent = item.querySelector(".footer .col ul");
+  const accordionHeader = item.querySelector(".accordion__header");
+  const accordionContent = item.querySelector(".accordion__content");
 
   accordionHeader.addEventListener("click", () => {
     accordionHeader.classList.toggle("active");
     accordionContent.classList.toggle("show");
   });
+});
+
+// media header
+const mediaHeader = document.querySelector(".meida__header");
+const openMediaHeaderBtn = document.querySelector(".open__media-header-btn");
+const closeMediaHeaderBtn = document.querySelector(".close__media-header-btn");
+
+openMediaHeaderBtn.addEventListener("click", () => {
+  mediaHeader.classList.add("show");
+  document.body.style.overflow = "hidden";
+});
+closeMediaHeaderBtn.addEventListener("click", () => {
+  mediaHeader.classList.remove("show");
+  document.body.style.overflow = "";
 });

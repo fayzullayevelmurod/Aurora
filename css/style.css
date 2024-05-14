@@ -301,6 +301,121 @@ header .header_bottom_right a p {
   line-height: 12px;
   color: #fff;
 }
+header .meida__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 100;
+  padding: 24px;
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+}
+header .meida__header.show {
+  transform: translateX(0);
+}
+header .meida__header .header_logo {
+  width: 154px;
+  height: 27px;
+}
+header .meida__header .header_location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header .meida__header .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 24px 0;
+}
+header .meida__header .accordion.last .accordion__header {
+  padding-bottom: 0;
+}
+header .meida__header .accordion.last .accordion__header::before {
+  display: none;
+}
+header .meida__header .accordion__header {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 12px;
+}
+header .meida__header .accordion__header.active {
+  color: #0d6efd;
+}
+header .meida__header .accordion__header.active svg {
+  transform: rotate(180deg);
+}
+header .meida__header .accordion__header.active svg path {
+  stroke: #0d6efd;
+}
+header .meida__header .accordion__header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(96.14deg, #dee2e7 0%, #ffffff 100%);
+}
+header .meida__header .accordion__content {
+  display: none;
+}
+header .meida__header .accordion__content.show {
+  display: flex;
+}
+header .meida__header .menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 0;
+  border-bottom: 1px solid #dee2e7;
+}
+header .meida__header .menu__list a {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #1c1c1c;
+  display: block;
+}
+header .meida__header ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+}
+header .meida__header ul li a {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  color: #1c1c1c !important;
+}
+header .meida__header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .meida__header .header_bottom_right {
+  align-items: start;
+  padding-top: 24px;
+  row-gap: 24px;
+}
+header .meida__header .header_bottom_right svg {
+  width: 24px;
+}
+header .meida__header .header_bottom_right li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .swiper-btns {
   display: flex;
@@ -1321,7 +1436,8 @@ header .header_bottom_right a p {
     bottom: -13px;
   }
   .footer__bottom .right__box {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
     gap: 12px;
   }
   .footer .number__box a {
