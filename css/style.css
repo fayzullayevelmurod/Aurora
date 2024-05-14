@@ -446,10 +446,7 @@ header .meida__header .header_bottom_right li {
 }
 
 .hero {
-  background: url(../images/home_slider_bg1.png) no-repeat;
-  background-size: cover;
   margin: 40px 32px 64px 32px;
-  border-radius: 10px;
   color: #fff;
 }
 .hero .container {
@@ -457,9 +454,10 @@ header .meida__header .header_bottom_right li {
   overflow: hidden;
   padding: 115px 0 24px 0;
   z-index: 1;
+  height: 100%;
 }
 .hero__content {
-  max-width: 738px;
+  max-width: 865px;
   width: 100%;
   padding-bottom: 115px;
 }
@@ -493,10 +491,16 @@ header .meida__header .header_bottom_right li {
 }
 .hero .swiper-btns {
   margin-left: auto;
+  position: absolute;
+  bottom: 24px;
+  right: 178px;
+  z-index: 1;
 }
 .hero .swiper-pagination {
   width: -moz-fit-content;
   width: fit-content;
+  left: 174px;
+  bottom: 38px;
 }
 .hero .swiper-pagination-clickable .swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.2509803922);
@@ -512,13 +516,38 @@ header .meida__header .header_bottom_right li {
 .hero .swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #fff;
 }
-.hero .builder__img {
+.hero .builder__img,
+.hero .svarka__img,
+.hero .human__img {
   position: absolute;
   bottom: -24px;
   right: 0;
   width: 738px;
   height: 497.84px;
   z-index: -1;
+}
+.hero .human__img {
+  width: 576.7px;
+  height: 504px;
+}
+.hero .svarka__img {
+  width: 623px;
+  height: 426px;
+}
+.hero .swiper .swiper-wrapper {
+  align-items: stretch;
+}
+.hero .swiper .swiper-slide {
+  height: unset;
+}
+.hero .swiper .slide__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 10px;
 }
 
 .special__offers .title__box {
