@@ -20,8 +20,8 @@ var swiper = new Swiper(".hero__swiper", {
 // product__swiper
 var swiper = new Swiper(".product__swiper", {
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: ".next-button",
+    prevEl: ".prev-button",
   },
   loop: true,
   slidesPerView: 4,

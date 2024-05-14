@@ -284,7 +284,8 @@ header {
   .header_bottom {
     @include flex-center();
     justify-content: space-between;
-    .phone__icon {
+    .phone__icon,
+    .search__icon {
       display: none;
     }
   }
