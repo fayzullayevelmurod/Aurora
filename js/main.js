@@ -106,8 +106,16 @@ var swiper = new Swiper(".products__swiper", {
     draggable: true,
   },
   breakpoints: {
-    1024: {
+    1547: {
       slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    1167: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 2,
       spaceBetween: 24,
     },
     744: {
