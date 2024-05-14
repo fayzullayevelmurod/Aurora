@@ -260,6 +260,15 @@
     padding-bottom: 12px;
     position: relative;
 
+    &.active {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+    img {
+      transition: all 0.2s linear;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -313,6 +322,41 @@
   }
   .swiper-button-disabled {
     opacity: 0.25;
+  }
+  .hero .swiper .slide__bg {
+    border-radius: 0;
+  }
+  .hero .swiper-btns {
+    bottom: 24px;
+    right: 24px;
+  }
+  .hero .svarka__img {
+    width: 372px;
+    height: 254.37px;
+  }
+  .hero .human__img {
+    width: 372px;
+    height: 325.11px;
+  }
+  .hero__content {
+    max-width: 491px;
+  }
+  .hero .swiper .swiper-scrollbar {
+    display: block;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #f7fafc;
+    border-radius: 0;
+    width: 100%;
+    .swiper-scrollbar-drag {
+      background: #00b517;
+      border-radius: 0;
+    }
+  }
+  .watche__product .relative__box .swiper-scrollbar {
+    display: block;
   }
 }
 
@@ -392,6 +436,7 @@
     right: 0;
     position: absolute;
     bottom: 0;
+    display: none;
   }
   .help__choos .container {
     position: unset;
@@ -399,6 +444,8 @@
   .help__choos .main_container {
     z-index: 2;
     position: relative;
+    background: url(../images/medai-operator-bg.png) no-repeat;
+    background-size: cover;
   }
   .help__choos .choos__bts {
     flex-direction: column;
@@ -433,5 +480,20 @@
     width: 312px;
     height: 210.47px;
     right: 24px;
+  }
+  .hero .swiper-btns {
+    bottom: 28px;
+    right: 24px;
+  }
+  .hero .svarka__img {
+    width: 312px;
+    height: 213.34px;
+  }
+  .hero .human__img {
+    width: 312px;
+    height: 272.67px;
+  }
+  .hero .swiper .slide__bg {
+    object-fit: cover;
   }
 }

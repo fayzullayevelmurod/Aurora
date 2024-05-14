@@ -603,6 +603,9 @@ header {
     .swiper-slide {
       height: unset;
     }
+    .swiper-scrollbar {
+      display: none;
+    }
     .slide__bg {
       position: absolute;
       top: 0;
@@ -636,6 +639,7 @@ header {
     }
   }
   .swiper {
+    padding: 5px 0;
     .swiper-btns {
       position: absolute;
       top: 50%;
@@ -667,8 +671,14 @@ header {
         background: #fff;
         color: #1c1c1c;
       }
+      img {
+        transform: scale(0.9);
+      }
     }
 
+    img {
+      @include transition();
+    }
     .status__box {
       font-size: 14px;
       font-weight: 400;
@@ -696,6 +706,8 @@ header {
     flex-wrap: wrap;
     gap: 24px;
     margin: 64px 0;
+    position: relative;
+    z-index: 3;
   }
   .offers__card {
     border: 1px solid #dee2e7;
@@ -1016,6 +1028,9 @@ header {
   .relative__box {
     position: relative;
 
+    .swiper-scrollbar {
+      display: none;
+    }
     .swiper-btns {
       position: absolute;
       z-index: 1;

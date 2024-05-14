@@ -1,8 +1,8 @@
 // hero swiper
 var swiper = new Swiper(".hero__swiper", {
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: ".button-next1",
+    prevEl: ".button-prev1",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -20,8 +20,8 @@ var swiper = new Swiper(".hero__swiper", {
 // product__swiper
 var swiper = new Swiper(".product__swiper", {
   navigation: {
-    nextEl: ".next-button",
-    prevEl: ".prev-button",
+    nextEl: ".button-next2",
+    prevEl: ".button-prev2",
   },
   loop: true,
   slidesPerView: 4,
@@ -40,10 +40,18 @@ var swiper = new Swiper(".product__swiper", {
       slidesPerView: 2,
       spaceBetween: 24,
       loop: false,
+      navigation: {
+        nextEl: ".button-next4",
+        prevEl: ".button-prev4",
+      },
     },
     0: {
       slidesPerView: 1,
       spaceBetween: 32,
+      navigation: {
+        nextEl: ".button-next4",
+        prevEl: ".button-prev4",
+      },
     },
   },
 });
@@ -51,8 +59,8 @@ var swiper = new Swiper(".product__swiper", {
 // watche__product-swiper
 var swiper = new Swiper(".watche__product-swiper", {
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: ".button-next3",
+    prevEl: ".button-prev3",
   },
   loop: true,
   slidesPerView: 6,
