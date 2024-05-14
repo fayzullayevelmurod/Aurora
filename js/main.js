@@ -54,6 +54,51 @@ var swiper = new Swiper(".watche__product-swiper", {
   slidesPerView: 6,
   spaceBetween: 24,
   speed: 600,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 24,
+    },
+    744: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: false,
+      allowTouchMove: true,
+    },
+  },
+});
+
+// products__swiper
+var swiper = new Swiper(".products__swiper", {
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+  loop: true,
+  slidesPerView: 4,
+  spaceBetween: 24,
+  speed: 600,
+  allowTouchMove: false,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    744: {
+      slidesPerView: 1.8,
+      spaceBetween: 24,
+      loop: false,
+      allowTouchMove: true,
+    },
+  },
 });
 
 // tab__content
@@ -86,5 +131,17 @@ tabItems.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
     hideTabContent();
     showTabContent(idx);
+  });
+});
+
+// accordion
+const accordion = document.querySelectorAll(".accordion");
+accordion.forEach((item) => {
+  const accordionHeader = item.querySelector(".footer__title-box");
+  const accordionContent = item.querySelector(".footer .col ul");
+
+  accordionHeader.addEventListener("click", () => {
+    accordionHeader.classList.toggle("active");
+    accordionContent.classList.toggle("show");
   });
 });

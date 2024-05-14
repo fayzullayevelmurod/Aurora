@@ -640,10 +640,25 @@ header {
   }
 }
 // help__choos
+.title__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  .swiper-btns {
+    display: none;
+  }
+}
 // products
 .products {
   padding: 64px 0;
+  .swiper-backface-hidden .swiper-slide {
+    // width: 100%;
+    // flex: 1 1 auto;
+  }
+  .swiper-scrollbar {
+    display: none;
+  }
   .products__boxes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
@@ -828,6 +843,8 @@ header {
 // watche__product
 .watche__product {
   padding: 64px 0;
+  position: relative;
+  z-index: 2;
   .title {
     padding-bottom: 32px;
   }
@@ -836,24 +853,25 @@ header {
   }
   .relative__box {
     position: relative;
-  }
-  .swiper-btns {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    justify-content: space-between;
-    top: 50%;
-    transform: translateY(-50%);
-    background: red;
-    & > button {
-      box-shadow: 0px 0px 4px 0px #00000040;
+
+    .swiper-btns {
       position: absolute;
-    }
-    .button-prev {
-      left: -20px;
-    }
-    .button-next {
-      right: -20px;
+      z-index: 1;
+      width: 100%;
+      justify-content: space-between;
+      top: 50%;
+      transform: translateY(-50%);
+      background: red;
+      & > button {
+        box-shadow: 0px 0px 4px 0px #00000040;
+        position: absolute;
+      }
+      .button-prev {
+        left: -20px;
+      }
+      .button-next {
+        right: -20px;
+      }
     }
   }
 
