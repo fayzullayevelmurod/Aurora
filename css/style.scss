@@ -1486,6 +1486,10 @@ header {
         background-size: 100% 1px;
         @include flex-center();
         gap: 24px;
+
+        &:first-child {
+          padding-top: 0;
+        }
       }
     }
   }

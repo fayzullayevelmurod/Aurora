@@ -1373,6 +1373,9 @@ header .meida__header .header_bottom_right li {
   align-items: center;
   gap: 24px;
 }
+.card .tab__content .services__box li:first-child {
+  padding-top: 0;
+}
 
 .swiper-pagination-bullet {
   width: 16px;
