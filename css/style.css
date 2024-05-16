@@ -1,3 +1,10 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1542,6 +1549,89 @@ header .meida__header .header_bottom_right li {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.basket {
+  padding-bottom: 64px;
+}
+.basket .order__box {
+  display: flex;
+  align-items: start;
+  padding-top: 32px;
+  gap: 24px;
+}
+.basket .order__box .left__box {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.basket .order__box .left__box h4 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.basket .order__box .select__form {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0 32px 0;
+}
+.basket .order__box .select__form h5 {
+  transition: 0.3s ease;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  cursor: pointer;
+}
+.basket .order__box .select__form h5.active, .basket .order__box .select__form h5:hover {
+  color: #0d6efd;
+}
+.basket .order__box form {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.basket .order__box form label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-bottom: 12px;
+  display: block;
+}
+.basket .order__box form label span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #eb001b;
+}
+.basket .order__box form .input__box {
+  max-width: 357px;
+  width: 100%;
+}
+.basket .order__box form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dee2e7;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #1c1c1c;
+}
+.basket .order__box form input:focus {
+  border-color: #0859d0;
+}
+.basket .order__box form input::-moz-placeholder {
+  opacity: 0.25;
+}
+.basket .order__box form input::placeholder {
+  opacity: 0.25;
+}
+.basket .order__box .right__box {
+  max-width: 357px;
+  width: 100%;
+  background: teal;
 }
 
 .swiper-pagination-bullet {
