@@ -132,6 +132,21 @@ var swiper = new Swiper(".products__swiper", {
   },
 });
 
+// card__swiper
+var swiper = new Swiper(".card__swiper", {
+  navigation: {
+    nextEl: ".button-next1",
+    prevEl: ".button-prev1",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 24,
+  speed: 600,
+});
+
 // tab__content
 const tabContent = document.querySelectorAll(".tab__content");
 const tabItems = document.querySelectorAll(".tab__item");
@@ -142,17 +157,21 @@ const historyBg = document.querySelectorAll(".history__brand-bg");
 function hideTabContent() {
   tabContent.forEach((content) => content.classList.remove("show"));
   tabItems.forEach((item) => item.classList.remove("active"));
-  companyName.forEach((name) => name.classList.remove("show"));
-  logo.forEach((el) => el.classList.remove("show"));
-  historyBg.forEach((img) => img.classList.remove("show"));
+  // if (companyName) {
+  //   companyName.forEach((name) => name.classList.remove("show"));
+  //   logo.forEach((el) => el.classList.remove("show"));
+  //   historyBg.forEach((img) => img.classList.remove("show"));
+  // }
 }
 
 function showTabContent(idx = 0) {
   tabItems[idx].classList.add("active");
   tabContent[idx].classList.add("show");
-  logo[idx].classList.add("show");
-  companyName[idx].classList.add("show");
-  historyBg[idx].classList.add("show");
+  // if (companyName) {
+  //   logo[idx].classList.add("show");
+  //   companyName[idx].classList.add("show");
+  //   historyBg[idx].classList.add("show");
+  // }
 }
 
 hideTabContent();
@@ -190,3 +209,17 @@ closeMediaHeaderBtn.addEventListener("click", () => {
   mediaHeader.classList.remove("show");
   document.body.style.overflow = "";
 });
+
+// active__class-icon
+// try {
+//   document.querySelectorAll(".active__class-icon").forEach(function (icon) {
+//     icon.addEventListener("click", function () {
+//       document
+//         .querySelectorAll(".active__class-icon.active")
+//         .forEach(function (activeIcon) {
+//           activeIcon.classList.remove("active");
+//         });
+//       icon.classList.add("active");
+//     });
+//   });
+// } catch (error) {}
