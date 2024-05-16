@@ -157,21 +157,25 @@ const historyBg = document.querySelectorAll(".history__brand-bg");
 function hideTabContent() {
   tabContent.forEach((content) => content.classList.remove("show"));
   tabItems.forEach((item) => item.classList.remove("active"));
-  // if (companyName) {
-  //   companyName.forEach((name) => name.classList.remove("show"));
-  //   logo.forEach((el) => el.classList.remove("show"));
-  //   historyBg.forEach((img) => img.classList.remove("show"));
-  // }
+  try {
+    if (companyName) {
+      companyName.forEach((name) => name.classList.remove("show"));
+      logo.forEach((el) => el.classList.remove("show"));
+      historyBg.forEach((img) => img.classList.remove("show"));
+    }
+  } catch (error) {}
 }
 
 function showTabContent(idx = 0) {
   tabItems[idx].classList.add("active");
   tabContent[idx].classList.add("show");
-  // if (companyName) {
-  //   logo[idx].classList.add("show");
-  //   companyName[idx].classList.add("show");
-  //   historyBg[idx].classList.add("show");
-  // }
+  try {
+    if (companyName) {
+      logo[idx].classList.add("show");
+      companyName[idx].classList.add("show");
+      historyBg[idx].classList.add("show");
+    }
+  } catch (error) {}
 }
 
 hideTabContent();

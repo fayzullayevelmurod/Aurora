@@ -1300,10 +1300,12 @@ header .meida__header .header_bottom_right li {
   align-items: center;
   gap: 24px;
 }
+.card .card__tabs {
+  padding-top: 64px;
+}
 .card .tab__header {
   display: flex;
   align-items: center;
-  padding-top: 64px;
   background: linear-gradient(96.14deg, #dee2e7 0%, #ffffff 100%);
   background-size: 100% 1px;
   background-position: left bottom;
@@ -1375,6 +1377,16 @@ header .meida__header .header_bottom_right li {
 }
 .card .tab__content .services__box li:first-child {
   padding-top: 0;
+}
+.card .charakters {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #1c1c1c;
+  transition: 0.3s ease;
+}
+.card .charakters:hover {
+  color: #0d6efd;
 }
 
 .swiper-pagination-bullet {
