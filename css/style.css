@@ -1410,7 +1410,7 @@ header .meida__header .header_bottom_right li {
 }
 .news__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
   gap: 23px;
 }
 .news__card {
