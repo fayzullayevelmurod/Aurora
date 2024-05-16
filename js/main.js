@@ -188,9 +188,7 @@ try {
       showTabContent(idx);
     });
   });
-} catch (error) {
-  
-}
+} catch (error) {}
 
 // accordion
 const accordion = document.querySelectorAll(".accordion");
@@ -239,8 +237,17 @@ try {
   showMoreNewsBtn.addEventListener("click", () => {
     newsCards.forEach((card) => {
       if (card.classList.contains("hide")) {
-        card.classList.remove('hide')
+        card.classList.remove("hide");
       }
+    });
+  });
+} catch (error) {}
+
+// check__box
+try {
+  document.querySelectorAll(".check__box").forEach((box) => {
+    box.addEventListener("click", () => {
+      box.classList.toggle("active");
     });
   });
 } catch (error) {}
