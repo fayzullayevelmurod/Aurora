@@ -148,45 +148,49 @@ var swiper = new Swiper(".card__swiper", {
 });
 
 // tab__content
-const tabContent = document.querySelectorAll(".tab__content");
-const tabItems = document.querySelectorAll(".tab__item");
-const companyName = document.querySelectorAll(".company__name");
-const logo = document.querySelectorAll(".aurora__logo");
-const historyBg = document.querySelectorAll(".history__brand-bg");
+try {
+  const tabContent = document.querySelectorAll(".tab__content");
+  const tabItems = document.querySelectorAll(".tab__item");
+  const companyName = document.querySelectorAll(".company__name");
+  const logo = document.querySelectorAll(".aurora__logo");
+  const historyBg = document.querySelectorAll(".history__brand-bg");
 
-function hideTabContent() {
-  tabContent.forEach((content) => content.classList.remove("show"));
-  tabItems.forEach((item) => item.classList.remove("active"));
-  try {
-    if (companyName) {
-      companyName.forEach((name) => name.classList.remove("show"));
-      logo.forEach((el) => el.classList.remove("show"));
-      historyBg.forEach((img) => img.classList.remove("show"));
-    }
-  } catch (error) {}
-}
+  function hideTabContent() {
+    tabContent.forEach((content) => content.classList.remove("show"));
+    tabItems.forEach((item) => item.classList.remove("active"));
+    try {
+      if (companyName) {
+        companyName.forEach((name) => name.classList.remove("show"));
+        logo.forEach((el) => el.classList.remove("show"));
+        historyBg.forEach((img) => img.classList.remove("show"));
+      }
+    } catch (error) {}
+  }
 
-function showTabContent(idx = 0) {
-  tabItems[idx].classList.add("active");
-  tabContent[idx].classList.add("show");
-  try {
-    if (companyName) {
-      logo[idx].classList.add("show");
-      companyName[idx].classList.add("show");
-      historyBg[idx].classList.add("show");
-    }
-  } catch (error) {}
-}
+  function showTabContent(idx = 0) {
+    tabItems[idx].classList.add("active");
+    tabContent[idx].classList.add("show");
+    try {
+      if (companyName) {
+        logo[idx].classList.add("show");
+        companyName[idx].classList.add("show");
+        historyBg[idx].classList.add("show");
+      }
+    } catch (error) {}
+  }
 
-hideTabContent();
-showTabContent(0);
+  hideTabContent();
+  showTabContent(0);
 
-tabItems.forEach((btn, idx) => {
-  btn.addEventListener("click", () => {
-    hideTabContent();
-    showTabContent(idx);
+  tabItems.forEach((btn, idx) => {
+    btn.addEventListener("click", () => {
+      hideTabContent();
+      showTabContent(idx);
+    });
   });
-});
+} catch (error) {
+  
+}
 
 // accordion
 const accordion = document.querySelectorAll(".accordion");
@@ -227,3 +231,16 @@ closeMediaHeaderBtn.addEventListener("click", () => {
 //     });
 //   });
 // } catch (error) {}
+
+try {
+  const showMoreNewsBtn = document.querySelector(".show__more-btn");
+  const newsCards = document.querySelectorAll(".news__card");
+
+  showMoreNewsBtn.addEventListener("click", () => {
+    newsCards.forEach((card) => {
+      if (card.classList.contains("hide")) {
+        card.classList.remove('hide')
+      }
+    });
+  });
+} catch (error) {}
