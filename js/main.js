@@ -251,3 +251,27 @@ try {
     });
   });
 } catch (error) {}
+
+try {
+  var swiper = new Swiper(".news__inner-swiper2", {
+    loop: true,
+    spaceBetween: 32,
+    slidesPerView: 5,
+    freeMode: true,
+    speed: 600,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".news__inner-swiper", {
+    // loop: true,
+    spaceBetween: 32,
+    slidesPerView: 1.5,
+    speed: 600,
+    navigation: {
+      nextEl: ".button-next1",
+      prevEl: ".button-prev1",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+} catch (error) {}
