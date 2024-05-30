@@ -967,7 +967,7 @@ header .meida__header .header_bottom_right li {
   padding-bottom: 32px;
 }
 .watche__product .swiper {
-  padding: 4px 0;
+  padding: 4px;
 }
 .watche__product .relative__box {
   position: relative;
@@ -1292,14 +1292,17 @@ header .meida__header .header_bottom_right li {
   align-items: center;
   gap: 16px;
 }
-.card__info-box .offer__box a {
+.card__info-box .offer__box a,
+.card__info-box .offer__box li {
+  white-space: nowrap;
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
   color: #1c1c1c;
   transition: 0.3s ease;
 }
-.card__info-box .offer__box a:hover {
+.card__info-box .offer__box a:hover,
+.card__info-box .offer__box li:hover {
   color: #0d6efd;
 }
 .card__info-box .add__cart-btns {
@@ -1407,7 +1410,8 @@ header .meida__header .header_bottom_right li {
   justify-content: center;
   border-radius: 50%;
   background: #fff;
-  display: none;
+  display: flex;
+  transition: all 0.2s linear;
 }
 .top__btn:hover {
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);
@@ -1418,6 +1422,9 @@ header .meida__header .header_bottom_right li {
 }
 .top__btn svg {
   transform: rotate(180deg);
+}
+.top__btn svg path {
+  transition: all 0.2s linear;
 }
 
 .news {
@@ -1877,6 +1884,10 @@ header .meida__header .header_bottom_right li {
   }
 }
 @media only screen and (max-width: 1024px) {
+  header {
+    border-bottom: 1px solid #dee2e7;
+    background: #f7fafc;
+  }
   header .header_top_left .header_location,
   header .header_top_center,
   header .header_top_right,
@@ -2247,6 +2258,123 @@ header .meida__header .header_bottom_right li {
   .news {
     padding-bottom: 24px;
   }
+  .card .card__boxes {
+    flex-direction: column;
+  }
+  .card .card__boxes .swiper-btns {
+    display: none;
+  }
+  .card .swiper {
+    height: 100%;
+    top: 25%;
+  }
+  .card .card__boxes > div {
+    max-width: 100%;
+  }
+  .card .swiper img {
+    width: 180px;
+    height: 121px;
+  }
+  .card .status__boxes {
+    padding-bottom: 0;
+  }
+  .card .status__boxes {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    gap: 8px;
+  }
+  .card .status__boxes .status__box {
+    font-size: 10px;
+    padding: 2px 8px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  .card .card__info-img {
+    height: 270px;
+    padding-bottom: 20px;
+  }
+  .card .swiper-pagination {
+    bottom: 56px;
+  }
+  .card__info-box .top__box .flex__box {
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: start;
+  }
+  .card__info-box .top__box .flex__box .stock__box span {
+    font-size: 16px;
+  }
+  .card__info-box .top__box .flex__box span {
+    font-size: 14px;
+  }
+  .card__info-box {
+    gap: 12px;
+    position: relative;
+    z-index: 10;
+  }
+  .card__info-box .price {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .card__info-box .cashback {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card__info-box .reviews__number {
+    padding-left: 4px;
+  }
+  .card__info-box .offer__box a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .card__info-box .offer__box {
+    gap: 12px;
+  }
+  .card__info-box .add__cart-btns {
+    margin-top: 12px;
+  }
+  .card__info-box .add__cart-btns button,
+  .card__info-box .add__cart-btns a {
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2509803922);
+  }
+  .card .card__tabs {
+    padding-top: 48px;
+  }
+  .card .tab__header .tab__item {
+    padding-bottom: 11px;
+  }
+  .card .tab__header {
+    margin-bottom: 24px;
+    overflow-x: auto;
+    margin-right: -24px;
+    padding-right: 24px;
+  }
+  .card .tab__header::-webkit-scrollbar {
+    display: none;
+  }
+  .card__title {
+    font-size: 28px;
+    line-height: 42px;
+    padding: 12px 0;
+  }
+  .breadcrumb ul {
+    overflow-x: auto;
+    margin-right: -24px;
+    padding-right: 24px;
+    gap: 12px;
+  }
+  .breadcrumb ul::-webkit-scrollbar {
+    display: none;
+  }
+  .breadcrumb ul a {
+    font-size: 14px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
 }
 @media screen and (max-width: 700px) {
   header .header_top_left .header_logo {
@@ -2387,7 +2515,7 @@ header .meida__header .header_bottom_right li {
   .news__date {
     overflow-x: auto;
     margin-right: -24px;
-    padding: 48px 0 24px 0;
+    padding: 48px 24px 24px 0;
   }
   .news__date::-webkit-scrollbar {
     display: none;
@@ -2397,5 +2525,30 @@ header .meida__header .header_bottom_right li {
   }
   .news__card {
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1490196078);
+  }
+  .card .swiper-pagination {
+    bottom: 52px;
+  }
+  .card__info-box .offer__box {
+    overflow-x: auto;
+    width: 100%;
+    margin-right: -24px;
+  }
+  .card__info-box .offer__box::-webkit-scrollbar {
+    display: none;
+  }
+  .watche__product .swiper {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .card__info-box .add__cart-btns {
+    flex-direction: column;
+    width: 100%;
+    row-gap: 12px;
+  }
+  .card__info-box .add__cart-btns a,
+  .card__info-box .add__cart-btns button {
+    text-align: center;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
