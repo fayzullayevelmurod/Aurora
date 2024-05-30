@@ -1396,8 +1396,32 @@ header .meida__header .header_bottom_right li {
   color: #0d6efd;
 }
 
+.top__btn {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  display: none;
+}
+.top__btn:hover {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  background: #0d6efd;
+}
+.top__btn:hover svg path {
+  stroke: #fff;
+}
+.top__btn svg {
+  transform: rotate(180deg);
+}
+
 .news {
-  padding-bottom: 64px;
+  padding: 12px 0 64px 0;
 }
 .news__date {
   display: flex;
@@ -2186,6 +2210,43 @@ header .meida__header .header_bottom_right li {
   .watche__product .relative__box .swiper-scrollbar {
     display: block;
   }
+  .news__date {
+    padding: 12px 0 48px 0;
+  }
+  .news__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news__card .news__img {
+    height: 175px;
+  }
+  .news__content {
+    padding: 24px;
+  }
+  .news__title {
+    padding: 24px 0 8px 0;
+  }
+  .news__content-top > div span {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .news .bottom__box {
+    flex-direction: column;
+  }
+  .news .bottom__box .show__more-btn {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+  .news .bottom__box .paginations {
+    width: 100%;
+  }
+  .news .bottom__box .paginations button {
+    width: 100%;
+  }
+  .top__btn {
+    display: flex;
+  }
+  .news {
+    padding-bottom: 24px;
+  }
 }
 @media screen and (max-width: 700px) {
   header .header_top_left .header_logo {
@@ -2319,5 +2380,22 @@ header .meida__header .header_bottom_right li {
   .hero .swiper .slide__bg {
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .news__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .news__date {
+    overflow-x: auto;
+    margin-right: -24px;
+    padding: 48px 0 24px 0;
+  }
+  .news__date::-webkit-scrollbar {
+    display: none;
+  }
+  .news__content-top > div {
+    gap: 8px;
+  }
+  .news__card {
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1490196078);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -275,3 +275,20 @@ try {
     },
   });
 } catch (error) {}
+
+try {
+  window.addEventListener("resize", () => {
+    const newsCard = document.querySelectorAll(".news__card");
+    const shouldHide = 1024;
+    newsCard.forEach((card, index) => {
+      if (shouldHide && index >= 4) {
+        card.classList.add("hide");
+      } else {
+        card.classList.remove("hide");
+      }
+    });
+  });
+  window.dispatchEvent(new Event("resize"));
+} catch (error) {
+  console.log(error);
+}

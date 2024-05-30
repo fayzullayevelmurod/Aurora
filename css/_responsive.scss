@@ -358,6 +358,43 @@
   .watche__product .relative__box .swiper-scrollbar {
     display: block;
   }
+  .news__date {
+    padding: 12px 0 48px 0;
+  }
+  .news__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news__card .news__img {
+    height: 175px;
+  }
+  .news__content {
+    padding: 24px;
+  }
+  .news__title {
+    padding: 24px 0 8px 0;
+  }
+  .news__content-top > div span {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .news .bottom__box {
+    flex-direction: column;
+    .show__more-btn {
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .news .bottom__box .paginations {
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
+  .top__btn {
+    display: flex;
+  }
+  .news {
+    padding-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -495,5 +532,23 @@
   }
   .hero .swiper .slide__bg {
     object-fit: cover;
+  }
+
+  .news__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .news__date {
+    overflow-x: auto;
+    margin-right: -24px;
+    padding: 48px 0 24px 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .news__content-top > div {
+    gap: 8px;
+  }
+  .news__card {
+    box-shadow: 0px 0px 16px 0px #00000026;
   }
 }
