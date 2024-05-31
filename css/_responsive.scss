@@ -570,6 +570,61 @@
   .basket {
     padding-bottom: 24px;
   }
+  .news__inner .title {
+    padding: 12px 0 24px 0;
+  }
+  .news__inner-date {
+    padding-bottom: 24px;
+  }
+  .news__inner-swiper {
+    height: 209px;
+    margin: 0 -24px;
+  }
+  .news__inner-swiper2 {
+    display: none;
+  }
+
+  .news__inner .swiper-btns .button-next,
+  .news__inner .swiper-btns .button-prev {
+    right: -25px;
+    box-shadow: 0px 0px 4px 0px #00000040;
+    background: #ffffff40;
+    width: 60px;
+    height: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    svg {
+      margin-left: -16px;
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+  .news__inner .swiper-btns .button-prev {
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    right: auto;
+    left: -25px;
+    svg {
+      margin-left: 16px;
+    }
+  }
+  .news__inner-desc {
+    padding-top: 24px;
+    gap: 24px;
+  }
+  .news__inner-desc h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .news__inner-desc .desc {
+    line-height: 30px;
+    font-size: 20px;
+  }
+  .news__inner {
+    padding-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -754,5 +809,11 @@
   }
   .basket .order__box form .input__box {
     flex: 1 1 auto;
+  }
+  .date__box span {
+    font-size: 14px;
+  }
+  .date__box {
+    gap: 12px;
   }
 }

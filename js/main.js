@@ -323,5 +323,19 @@ try {
     thumbs: {
       swiper: swiper,
     },
+    breakpoints: {
+      1024: {
+        spaceBetween: 32,
+        slidesPerView: 1.5,
+      },
+      744: {
+        spaceBetween: 0,
+        slidesPerView: 2,
+      },
+      0: {
+        spaceBetween: 0,
+        slidesPerView: 1,
+      },
+    },
   });
 } catch (error) {}
