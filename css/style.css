@@ -1412,6 +1412,7 @@ header .meida__header .header_bottom_right li {
   background: #fff;
   display: flex;
   transition: all 0.2s linear;
+  z-index: 20;
 }
 .top__btn:hover {
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);

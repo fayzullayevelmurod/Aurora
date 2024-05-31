@@ -231,16 +231,66 @@ closeMediaHeaderBtn.addEventListener("click", () => {
 // } catch (error) {}
 
 try {
+  // const showMoreNewsBtn = document.querySelector(".show__more-btn");
+  // const newsCards = document.querySelectorAll(".news__card");
+
+  // showMoreNewsBtn.addEventListener("click", () => {
+  //   newsCards.forEach((card) => {
+  //     if (card.classList.contains("hide")) {
+  //       card.classList.remove("hide");
+  //     }
+  //   });
+  // });
+
+  // window.addEventListener("resize", handleResize);
+  // window.addEventListener("load", handleResize);
+
+  // function handleResize() {
+  //   const newsCards = document.querySelectorAll(".news__card");
+  //   const shouldHide = window.innerWidth <= 1024;
+
+  //   newsCards.forEach((card, index) => {
+  //     if (shouldHide && index >= 4) {
+  //       card.classList.add("hide");
+  //     } else {
+  //       card.classList.remove("hide");
+  //     }
+  //   });
+  // }
   const showMoreNewsBtn = document.querySelector(".show__more-btn");
   const newsCards = document.querySelectorAll(".news__card");
 
   showMoreNewsBtn.addEventListener("click", () => {
     newsCards.forEach((card) => {
-      if (card.classList.contains("hide")) {
-        card.classList.remove("hide");
-      }
+      card.classList.remove("hide");
     });
   });
+
+  window.addEventListener("resize", handleResize);
+  window.addEventListener("load", handleResize);
+
+  function handleResize() {
+    const shouldHide = window.innerWidth <= 1024;
+
+    newsCards.forEach((card, index) => {
+      if (shouldHide) {
+        if (index >= 4) {
+          card.classList.add("hide");
+        } else {
+          card.classList.remove("hide");
+        }
+      } else {
+        if (index >= 6) {
+          card.classList.add("hide");
+        } else {
+          card.classList.remove("hide");
+        }
+      }
+    });
+  }
+
+  // Initial call to handleResize to set up the state correctly on load
+  handleResize();
 } catch (error) {}
 
 // check__box
@@ -275,20 +325,3 @@ try {
     },
   });
 } catch (error) {}
-
-try {
-  window.addEventListener("resize", () => {
-    const newsCard = document.querySelectorAll(".news__card");
-    const shouldHide = 1024;
-    newsCard.forEach((card, index) => {
-      if (shouldHide && index >= 4) {
-        card.classList.add("hide");
-      } else {
-        card.classList.remove("hide");
-      }
-    });
-  });
-  window.dispatchEvent(new Event("resize"));
-} catch (error) {
-  console.log(error);
-}
