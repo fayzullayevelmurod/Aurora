@@ -1701,7 +1701,7 @@ header {
 }
 // basket page
 .basket {
-  padding-bottom: 64px;
+  padding: 12px 0 64px 0;
   .order__box {
     @include flex-start();
     padding-top: 32px;
@@ -1727,6 +1727,7 @@ header {
         font-weight: 600;
         line-height: 36px;
         cursor: pointer;
+        white-space: nowrap;
         &.active,
         &:hover {
           color: #0d6efd;
@@ -1751,7 +1752,7 @@ header {
         }
       }
       .input__box {
-        max-width: 357px;
+        flex: 1 1 357px;
         width: 100%;
       }
       input {
