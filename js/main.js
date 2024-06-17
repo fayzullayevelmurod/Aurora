@@ -71,12 +71,26 @@ var swiper = new Swiper(".watche__product-swiper", {
     draggable: true,
   },
   breakpoints: {
-    1024: {
+    1360: {
       slidesPerView: 6,
       spaceBetween: 24,
     },
-    744: {
+    1181: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    1180: {
       slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    761: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: false,
+      allowTouchMove: true,
+    },
+    480: {
+      slidesPerView: 2,
       spaceBetween: 24,
       loop: false,
       allowTouchMove: true,
@@ -216,47 +230,7 @@ closeMediaHeaderBtn.addEventListener("click", () => {
   document.body.style.overflow = "";
 });
 
-// active__class-icon
-// try {
-//   document.querySelectorAll(".active__class-icon").forEach(function (icon) {
-//     icon.addEventListener("click", function () {
-//       document
-//         .querySelectorAll(".active__class-icon.active")
-//         .forEach(function (activeIcon) {
-//           activeIcon.classList.remove("active");
-//         });
-//       icon.classList.add("active");
-//     });
-//   });
-// } catch (error) {}
-
 try {
-  // const showMoreNewsBtn = document.querySelector(".show__more-btn");
-  // const newsCards = document.querySelectorAll(".news__card");
-
-  // showMoreNewsBtn.addEventListener("click", () => {
-  //   newsCards.forEach((card) => {
-  //     if (card.classList.contains("hide")) {
-  //       card.classList.remove("hide");
-  //     }
-  //   });
-  // });
-
-  // window.addEventListener("resize", handleResize);
-  // window.addEventListener("load", handleResize);
-
-  // function handleResize() {
-  //   const newsCards = document.querySelectorAll(".news__card");
-  //   const shouldHide = window.innerWidth <= 1024;
-
-  //   newsCards.forEach((card, index) => {
-  //     if (shouldHide && index >= 4) {
-  //       card.classList.add("hide");
-  //     } else {
-  //       card.classList.remove("hide");
-  //     }
-  //   });
-  // }
   const showMoreNewsBtn = document.querySelector(".show__more-btn");
   const newsCards = document.querySelectorAll(".news__card");
 

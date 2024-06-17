@@ -1,929 +1,1405 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora</title>
+    <!-- Swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- css file -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- css link -->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aurora</title>
-  <!-- Swiper css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- css file -->
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&display=swap"
-    rel="stylesheet" />
-  <!-- fonts -->
-  <!-- css link -->
-  <link rel="stylesheet" href="./css/style.css" />
-  <!-- css link -->
-</head>
-
-<body>
-  <div class="wrapper">
-    <!-- header -->
-    <header>
-      <div class="header_container">
-        <div class="header_top">
-          <div class="header_top_left">
-            <button class="menu__icon open__media-header-btn">
-              <img src="images/icons/menu-icon.svg" alt="menu-icon" />
-            </button>
-            <a href="/" class="header_logo">
-              <img src="./images/logo/header_logo.svg" alt="" />
-            </a>
-            <a class="header_location" href="#">
-              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M15.7396 1.54038C15.8408 1.49479 15.9024 1.49816 15.9269 1.5022C15.9535 1.50659 15.9676 1.51651 15.9755 1.52448C15.9835 1.53244 15.9934 1.54651 15.9978 1.57314C16.0018 1.59763 16.0052 1.65918 15.9596 1.76037L9.47665 16.1514C9.38678 16.3509 9.16593 16.4949 8.8879 16.4999C8.60076 16.505 8.54051 16.3783 8.52974 16.3427C8.02469 14.6724 7.23408 12.724 6.00505 11.4949C4.77602 10.2659 2.82762 9.47531 1.15731 8.97027C1.12166 8.95949 0.994979 8.89924 1.00012 8.6121C1.00509 8.33407 1.14909 8.11322 1.3486 8.02334L15.7396 1.54038Z"
-                  stroke="#1C1C1C" stroke-width="2" stroke-linejoin="round" />
-              </svg>
-              <span> Челябинск </span>
-            </a>
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      <header>
+        <div class="header_container">
+          <div class="header_top">
+            <div class="header_top_left">
+              <button class="menu__icon open__media-header-btn">
+                <img src="images/icons/menu-icon.svg" alt="menu-icon" />
+              </button>
+              <a href="/" class="header_logo">
+                <img src="./images/logo/header_logo.svg" alt="" />
+              </a>
+              <a class="header_location" href="#">
+                <svg
+                  width="17"
+                  height="18"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.7396 1.54038C15.8408 1.49479 15.9024 1.49816 15.9269 1.5022C15.9535 1.50659 15.9676 1.51651 15.9755 1.52448C15.9835 1.53244 15.9934 1.54651 15.9978 1.57314C16.0018 1.59763 16.0052 1.65918 15.9596 1.76037L9.47665 16.1514C9.38678 16.3509 9.16593 16.4949 8.8879 16.4999C8.60076 16.505 8.54051 16.3783 8.52974 16.3427C8.02469 14.6724 7.23408 12.724 6.00505 11.4949C4.77602 10.2659 2.82762 9.47531 1.15731 8.97027C1.12166 8.95949 0.994979 8.89924 1.00012 8.6121C1.00509 8.33407 1.14909 8.11322 1.3486 8.02334L15.7396 1.54038Z"
+                    stroke="#1C1C1C"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span> Челябинск </span>
+              </a>
+            </div>
+            <form action="#" class="header_top_center">
+              <input
+                type="search"
+                id="search"
+                placeholder="Найти"
+                autocomplete="off"
+              />
+              <button class="header_select">
+                <span> Каталог </span>
+                <img src="./images/icons/down_icon.svg" alt="" />
+              </button>
+              <label for="search" class="search_btn">
+                <img src="./images/icons/search_icon.svg" alt="" />
+              </label>
+            </form>
+            <div class="header_top_right">
+              <button class="phone_select">
+                <a href="tel:+78000000000"> +7 (800) 000 00 00 </a>
+                <svg
+                  width="7"
+                  height="6"
+                  viewBox="0 0 7 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z" fill="#1C1C1C" />
+                </svg>
+              </button>
+              <button class="modal_btn">Заказать звонок</button>
+            </div>
           </div>
-          <form action="#" class="header_top_center">
-            <input type="search" id="search" placeholder="Найти" autocomplete="off" />
-            <button class="header_select">
-              <span> Каталог </span>
-              <img src="./images/icons/down_icon.svg" alt="" />
-            </button>
-            <label for="search" class="search_btn">
-              <img src="./images/icons/search_icon.svg" alt="" />
-            </label>
-          </form>
-          <div class="header_top_right">
-            <button class="phone_select">
-              <a href="tel:+78000000000"> +7 (800) 000 00 00 </a>
-              <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z" fill="#1C1C1C" />
-              </svg>
-            </button>
-            <button class="modal_btn">Заказать звонок</button>
-          </div>
-        </div>
-        <div class="header_bottom">
-          <nav>
-            <ul class="nav_link">
-              <button class="catalog_btn">Каталог</button>
-              <li class="nav_item">
-                <a href="#"> Акции </a>
-              </li>
-              <li class="nav_item">
-                <a href="#"> Новости </a>
-              </li>
-              <li class="nav_item">
+          <div class="header_bottom">
+            <nav>
+              <ul class="nav_link">
+                <button class="catalog_btn">Каталог</button>
+                <li class="nav_item">
+                  <a href="#"> Акции </a>
+                </li>
+                <li class="nav_item">
+                  <a href="#"> Новости </a>
+                </li>
+                <li class="nav_item">
+                  <a href="#">
+                    Информация
+                    <svg
+                      width="7"
+                      height="6"
+                      viewBox="0 0 7 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z"
+                        fill="#1C1C1C"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="nav_item">
+                  <a href="#"> Компания </a>
+                </li>
+                <li class="nav_item">
+                  <a href="#"> Контакты </a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="header_bottom_right">
+              <li class="phone__icon">
                 <a href="#">
-                  Информация
-                  <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z" fill="#1C1C1C" />
+                  <svg
+                    width="20"
+                    height="25"
+                    viewBox="0 0 20 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.4604 18.5765C19.4604 18.5765 18.2656 17.415 17.6823 16.9248C17.1367 16.4559 16.2523 15.8272 15.7631 15.5075C14.8882 14.9428 13.985 15.2944 13.6181 15.8592L12.8466 16.9781C12.4515 17.5429 11.84 17.447 11.6801 17.415C10.5417 17.0953 9.32808 16.2854 8.09564 14.9321C6.84439 13.5575 6.08235 12.1296 5.81893 10.6377L5.80011 10.5418C5.72485 9.93441 5.81893 9.64669 6.03531 9.23111L6.07294 9.18848C6.59038 8.64502 7.55939 7.97369 7.6911 7.33432C8.06742 6.22609 6.42103 3.93503 6.18583 3.5301C6.18583 3.5301 4.99103 1.73988 4.56767 1.38822C4.10669 0.951325 3.40109 0.706235 2.67668 1.20707L2.63905 1.23904C0.578714 2.81614 -0.173918 3.73256 0.0330563 5.08589L0.14595 5.62935C1.19023 9.35898 3.21293 13.3444 6.22347 16.8928C9.20578 20.3987 12.4233 22.4873 15.6032 23.9472C16.4311 24.2562 17.2872 23.9898 18.1621 23.1373L18.1809 23.1266C18.8583 22.4127 19.3851 21.6561 19.7803 20.8356V20.8143C20.166 19.9511 20.0343 19.1306 19.4604 18.5765Z"
+                      fill="#1C1C1C"
+                    />
                   </svg>
                 </a>
               </li>
-              <li class="nav_item">
-                <a href="#"> Компания </a>
+              <li>
+                <a class="user__box" href="#">
+                  <svg
+                    width="18"
+                    height="21"
+                    viewBox="0 0 18 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 13C12.3137 13 15 10.3137 15 7C15 3.68629 12.3137 1 9 1C5.68629 1 3 3.68629 3 7C3 10.3137 5.68629 13 9 13ZM9 13C4.58172 13 1 16.5817 1 21M9 13C13.4183 13 17 16.5817 17 21"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <span> Войти </span>
+                </a>
               </li>
-              <li class="nav_item">
-                <a href="#"> Контакты </a>
+              <li class="search__icon">
+                <a href="#!">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 15L19 19M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z"
+                      stroke="black"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <div class="circle">
+                    <p>99</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="19"
+                    height="16"
+                    viewBox="0 0 19 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="14" height="2" fill="black" />
+                    <rect
+                      width="9"
+                      height="2"
+                      transform="matrix(1 0 0 -1 0 9)"
+                      fill="black"
+                    />
+                    <rect
+                      width="8"
+                      height="2"
+                      transform="matrix(1 0 0 -1 11 9)"
+                      fill="black"
+                    />
+                    <rect
+                      width="8"
+                      height="2"
+                      transform="matrix(-4.37114e-08 1 1 4.37114e-08 14 4)"
+                      fill="black"
+                    />
+                    <rect y="14" width="14" height="2" fill="black" />
+                  </svg>
+                  <div class="circle">
+                    <p>99</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.144047 0.810364C0.406634 0.416484 0.938806 0.31005 1.33269 0.572636L6.47552 4.00119C6.65823 4.123 6.78723 4.31029 6.83589 4.52442L9.54139 16.4286H19.6444L20.4847 13.5715H12.2857C11.8123 13.5715 11.4285 13.1877 11.4285 12.7143C11.4285 12.241 11.8123 11.8572 12.2857 11.8572H20.9889L21.9973 8.42865H12.2858C11.8124 8.42865 11.4286 8.04489 11.4286 7.57151C11.4286 7.09812 11.8124 6.71437 12.2858 6.71437H23.1429C23.413 6.71437 23.6673 6.84171 23.8291 7.058C23.991 7.27429 24.0414 7.55421 23.9652 7.81336L21.108 17.5276C21.0007 17.8924 20.666 18.1429 20.2857 18.1429H8.8572C8.457 18.1429 8.11006 17.866 8.02137 17.4757L5.24004 5.23785L0.381775 1.999C-0.012105 1.73642 -0.118539 1.20424 0.144047 0.810364ZM11.7142 21.5715C11.7142 22.676 10.8188 23.5714 9.71425 23.5714C8.60968 23.5714 7.71425 22.676 7.71425 21.5715C7.71425 20.4669 8.60968 19.5715 9.71425 19.5715C10.8188 19.5715 11.7142 20.4669 11.7142 21.5715ZM21.4285 21.5715C21.4285 22.676 20.5331 23.5714 19.4285 23.5714C18.3239 23.5714 17.4285 22.676 17.4285 21.5715C17.4285 20.4669 18.3239 19.5715 19.4285 19.5715C20.5331 19.5715 21.4285 20.4669 21.4285 21.5715Z"
+                      fill="#1C1C1C"
+                    />
+                  </svg>
+                  <div class="circle">
+                    <p>99</p>
+                  </div>
+                </a>
               </li>
             </ul>
-          </nav>
-          <ul class="header_bottom_right">
-            <li class="phone__icon">
-              <a href="#">
-                <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M19.4604 18.5765C19.4604 18.5765 18.2656 17.415 17.6823 16.9248C17.1367 16.4559 16.2523 15.8272 15.7631 15.5075C14.8882 14.9428 13.985 15.2944 13.6181 15.8592L12.8466 16.9781C12.4515 17.5429 11.84 17.447 11.6801 17.415C10.5417 17.0953 9.32808 16.2854 8.09564 14.9321C6.84439 13.5575 6.08235 12.1296 5.81893 10.6377L5.80011 10.5418C5.72485 9.93441 5.81893 9.64669 6.03531 9.23111L6.07294 9.18848C6.59038 8.64502 7.55939 7.97369 7.6911 7.33432C8.06742 6.22609 6.42103 3.93503 6.18583 3.5301C6.18583 3.5301 4.99103 1.73988 4.56767 1.38822C4.10669 0.951325 3.40109 0.706235 2.67668 1.20707L2.63905 1.23904C0.578714 2.81614 -0.173918 3.73256 0.0330563 5.08589L0.14595 5.62935C1.19023 9.35898 3.21293 13.3444 6.22347 16.8928C9.20578 20.3987 12.4233 22.4873 15.6032 23.9472C16.4311 24.2562 17.2872 23.9898 18.1621 23.1373L18.1809 23.1266C18.8583 22.4127 19.3851 21.6561 19.7803 20.8356V20.8143C20.166 19.9511 20.0343 19.1306 19.4604 18.5765Z"
-                    fill="#1C1C1C" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="user__box" href="#">
-                <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9 13C12.3137 13 15 10.3137 15 7C15 3.68629 12.3137 1 9 1C5.68629 1 3 3.68629 3 7C3 10.3137 5.68629 13 9 13ZM9 13C4.58172 13 1 16.5817 1 21M9 13C13.4183 13 17 16.5817 17 21"
-                    stroke="#1C1C1C" stroke-width="2" />
-                </svg>
-                <span> Войти </span>
-              </a>
-            </li>
-            <li class="search__icon">
-              <a href="#!">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15 15L19 19M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z"
-                    stroke="black" stroke-width="2" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z"
-                    fill="black" />
-                </svg>
-                <div class="circle">
-                  <p>99</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="14" height="2" fill="black" />
-                  <rect width="9" height="2" transform="matrix(1 0 0 -1 0 9)" fill="black" />
-                  <rect width="8" height="2" transform="matrix(1 0 0 -1 11 9)" fill="black" />
-                  <rect width="8" height="2" transform="matrix(-4.37114e-08 1 1 4.37114e-08 14 4)" fill="black" />
-                  <rect y="14" width="14" height="2" fill="black" />
-                </svg>
-                <div class="circle">
-                  <p>99</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M0.144047 0.810364C0.406634 0.416484 0.938806 0.31005 1.33269 0.572636L6.47552 4.00119C6.65823 4.123 6.78723 4.31029 6.83589 4.52442L9.54139 16.4286H19.6444L20.4847 13.5715H12.2857C11.8123 13.5715 11.4285 13.1877 11.4285 12.7143C11.4285 12.241 11.8123 11.8572 12.2857 11.8572H20.9889L21.9973 8.42865H12.2858C11.8124 8.42865 11.4286 8.04489 11.4286 7.57151C11.4286 7.09812 11.8124 6.71437 12.2858 6.71437H23.1429C23.413 6.71437 23.6673 6.84171 23.8291 7.058C23.991 7.27429 24.0414 7.55421 23.9652 7.81336L21.108 17.5276C21.0007 17.8924 20.666 18.1429 20.2857 18.1429H8.8572C8.457 18.1429 8.11006 17.866 8.02137 17.4757L5.24004 5.23785L0.381775 1.999C-0.012105 1.73642 -0.118539 1.20424 0.144047 0.810364ZM11.7142 21.5715C11.7142 22.676 10.8188 23.5714 9.71425 23.5714C8.60968 23.5714 7.71425 22.676 7.71425 21.5715C7.71425 20.4669 8.60968 19.5715 9.71425 19.5715C10.8188 19.5715 11.7142 20.4669 11.7142 21.5715ZM21.4285 21.5715C21.4285 22.676 20.5331 23.5714 19.4285 23.5714C18.3239 23.5714 17.4285 22.676 17.4285 21.5715C17.4285 20.4669 18.3239 19.5715 19.4285 19.5715C20.5331 19.5715 21.4285 20.4669 21.4285 21.5715Z"
-                    fill="#1C1C1C" />
-                </svg>
-                <div class="circle">
-                  <p>99</p>
-                </div>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="meida__header">
-        <div class="meida__header-top">
-          <a href="/" class="header_logo">
-            <img src="./images/logo/header_logo.svg" alt="" />
-          </a>
-          <button class="close__media-header-btn">
-            <img src="images/icons/close.svg" alt="close icon" />
-          </button>
-        </div>
-        <div class="menu">
-          <a class="header_location" href="#">
-            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M15.7396 1.54038C15.8408 1.49479 15.9024 1.49816 15.9269 1.5022C15.9535 1.50659 15.9676 1.51651 15.9755 1.52448C15.9835 1.53244 15.9934 1.54651 15.9978 1.57314C16.0018 1.59763 16.0052 1.65918 15.9596 1.76037L9.47665 16.1514C9.38678 16.3509 9.16593 16.4949 8.8879 16.4999C8.60076 16.505 8.54051 16.3783 8.52974 16.3427C8.02469 14.6724 7.23408 12.724 6.00505 11.4949C4.77602 10.2659 2.82762 9.47531 1.15731 8.97027C1.12166 8.95949 0.994979 8.89924 1.00012 8.6121C1.00509 8.33407 1.14909 8.11322 1.3486 8.02334L15.7396 1.54038Z"
-                stroke="#1C1C1C" stroke-width="2" stroke-linejoin="round"></path>
-            </svg>
-            <span> Челябинск </span>
-          </a>
-          <a class="header_location" href="#">
-            <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9 13C12.3137 13 15 10.3137 15 7C15 3.68629 12.3137 1 9 1C5.68629 1 3 3.68629 3 7C3 10.3137 5.68629 13 9 13ZM9 13C4.58172 13 1 16.5817 1 21M9 13C13.4183 13 17 16.5817 17 21"
-                stroke="#1C1C1C" stroke-width="2"></path>
-            </svg>
-            <span> Войти </span>
-          </a>
-        </div>
-        <div class="accordion">
-          <div class="accordion__header">
-            <span>Каталог</span>
-            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.00008 1.50045L7 6.22661L12.9999 1.50045" stroke="#1C1C1C" stroke-width="2"
-                stroke-linecap="round" />
-            </svg>
+        <div class="meida__header">
+          <div class="meida__header-top">
+            <a href="/" class="header_logo">
+              <img src="./images/logo/header_logo.svg" alt="" />
+            </a>
+            <button class="close__media-header-btn">
+              <img src="images/icons/close.svg" alt="close icon" />
+            </button>
           </div>
-          <div class="accordion__content">
-            <ul>
-              <li>
-                <a href="#!">Сварочное оборудование</a>
-              </li>
-              <li>
-                <a href="#!">Компрессоры</a>
-              </li>
-              <li>
-                <a href="#!">Генераторы</a>
-              </li>
-              <li>
-                <a href="#!">Культиваторы и мотоблоки</a>
-              </li>
-              <li>
-                <a href="#!">Тепловая техника</a>
-              </li>
-              <li>
-                <a href="#!">Маски для сварки</a>
-              </li>
-              <li>
-                <a href="#!">Пуско-зарядные устройства</a>
-              </li>
-            </ul>
+          <div class="menu">
+            <a class="header_location" href="#">
+              <svg
+                width="17"
+                height="18"
+                viewBox="0 0 17 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.7396 1.54038C15.8408 1.49479 15.9024 1.49816 15.9269 1.5022C15.9535 1.50659 15.9676 1.51651 15.9755 1.52448C15.9835 1.53244 15.9934 1.54651 15.9978 1.57314C16.0018 1.59763 16.0052 1.65918 15.9596 1.76037L9.47665 16.1514C9.38678 16.3509 9.16593 16.4949 8.8879 16.4999C8.60076 16.505 8.54051 16.3783 8.52974 16.3427C8.02469 14.6724 7.23408 12.724 6.00505 11.4949C4.77602 10.2659 2.82762 9.47531 1.15731 8.97027C1.12166 8.95949 0.994979 8.89924 1.00012 8.6121C1.00509 8.33407 1.14909 8.11322 1.3486 8.02334L15.7396 1.54038Z"
+                  stroke="#1C1C1C"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <span> Челябинск </span>
+            </a>
+            <a class="header_location" href="#">
+              <svg
+                width="18"
+                height="21"
+                viewBox="0 0 18 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 13C12.3137 13 15 10.3137 15 7C15 3.68629 12.3137 1 9 1C5.68629 1 3 3.68629 3 7C3 10.3137 5.68629 13 9 13ZM9 13C4.58172 13 1 16.5817 1 21M9 13C13.4183 13 17 16.5817 17 21"
+                  stroke="#1C1C1C"
+                  stroke-width="2"
+                ></path>
+              </svg>
+              <span> Войти </span>
+            </a>
           </div>
-        </div>
-        <div class="menu__list">
-          <a href="#!">Акции</a>
-          <a href="#!">Новости</a>
-          <div class="accordion last">
+          <div class="accordion">
             <div class="accordion__header">
-              <span>Информация</span>
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.00008 1.50045L7 6.22661L12.9999 1.50045" stroke="#1C1C1C" stroke-width="2"
-                  stroke-linecap="round" />
+              <span>Каталог</span>
+              <svg
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.00008 1.50045L7 6.22661L12.9999 1.50045"
+                  stroke="#1C1C1C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
               </svg>
             </div>
             <div class="accordion__content">
               <ul>
                 <li>
-                  <a href="#!">История бренда</a>
+                  <a href="#!">Сварочное оборудование</a>
                 </li>
                 <li>
-                  <a href="#!">Доставка</a>
+                  <a href="#!">Компрессоры</a>
                 </li>
                 <li>
-                  <a href="#!">Оплата</a>
+                  <a href="#!">Генераторы</a>
+                </li>
+                <li>
+                  <a href="#!">Культиваторы и мотоблоки</a>
+                </li>
+                <li>
+                  <a href="#!">Тепловая техника</a>
+                </li>
+                <li>
+                  <a href="#!">Маски для сварки</a>
+                </li>
+                <li>
+                  <a href="#!">Пуско-зарядные устройства</a>
                 </li>
               </ul>
             </div>
           </div>
-          <a href="#!">Компания</a>
-          <a href="#!">Контакты</a>
-        </div>
-
-        <ul class="header_bottom_right">
-          <li>
-            <a href="#">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M0.144047 0.810364C0.406634 0.416484 0.938806 0.31005 1.33269 0.572636L6.47552 4.00119C6.65823 4.123 6.78723 4.31029 6.83589 4.52442L9.54139 16.4286H19.6444L20.4847 13.5715H12.2857C11.8123 13.5715 11.4285 13.1877 11.4285 12.7143C11.4285 12.241 11.8123 11.8572 12.2857 11.8572H20.9889L21.9973 8.42865H12.2858C11.8124 8.42865 11.4286 8.04489 11.4286 7.57151C11.4286 7.09812 11.8124 6.71437 12.2858 6.71437H23.1429C23.413 6.71437 23.6673 6.84171 23.8291 7.058C23.991 7.27429 24.0414 7.55421 23.9652 7.81336L21.108 17.5276C21.0007 17.8924 20.666 18.1429 20.2857 18.1429H8.8572C8.457 18.1429 8.11006 17.866 8.02137 17.4757L5.24004 5.23785L0.381775 1.999C-0.012105 1.73642 -0.118539 1.20424 0.144047 0.810364ZM11.7142 21.5715C11.7142 22.676 10.8188 23.5714 9.71425 23.5714C8.60968 23.5714 7.71425 22.676 7.71425 21.5715C7.71425 20.4669 8.60968 19.5715 9.71425 19.5715C10.8188 19.5715 11.7142 20.4669 11.7142 21.5715ZM21.4285 21.5715C21.4285 22.676 20.5331 23.5714 19.4285 23.5714C18.3239 23.5714 17.4285 22.676 17.4285 21.5715C17.4285 20.4669 18.3239 19.5715 19.4285 19.5715C20.5331 19.5715 21.4285 20.4669 21.4285 21.5715Z"
-                  fill="#1C1C1C"></path>
-              </svg>
-              <div class="circle">
-                <p>99</p>
-              </div>
-            </a>
-            <span>Корзина</span>
-          </li>
-          <li>
-            <a href="#">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z"
-                  fill="black"></path>
-              </svg>
-            </a>
-            <span>Сравнение</span>
-          </li>
-          <li>
-            <a href="#">
-              <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="14" height="2" fill="black"></rect>
-                <rect width="9" height="2" transform="matrix(1 0 0 -1 0 9)" fill="black"></rect>
-                <rect width="8" height="2" transform="matrix(1 0 0 -1 11 9)" fill="black"></rect>
-                <rect width="8" height="2" transform="matrix(-4.37114e-08 1 1 4.37114e-08 14 4)" fill="black"></rect>
-                <rect y="14" width="14" height="2" fill="black"></rect>
-              </svg>
-            </a>
-            <span>Избранное</span>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <!-- header -->
-
-    <!-- main -->
-    <main>
-      <!-- home -->
-      <section class="hero">
-        <div class="swiper hero__swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="slide__bg" src="images/home_slider_bg1.png" alt="" />
-              <div class="container">
-                <img class="builder__img" src="images/builder.png" alt="builder img" />
-                <div class="hero__content">
-                  <h3 class="hero__title">Всегда правильный выбор</h3>
-                  <p class="hero__desc">
-                    Лучшие ценовые предложения в интернете в каждой категории
-                    товаров!
-                  </p>
-                  <div class="hero__btns">
-                    <a class="hero__blue-btn" href="#!">Перейти в каталог</a>
-                    <a href="#!" class="white__btn">Задать звонок</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img class="slide__bg" src="images/home_slider_bg2.png" alt="" />
-              <div class="container">
-                <img class="svarka__img" src="images/svarka.png" alt="svarka img" />
-                <div class="hero__content">
-                  <h3 class="hero__title">
-                    Индивидуальные предложения для юридических лиц
-                  </h3>
-                  <p class="hero__desc">
-                    Наши товары обладают одними из лучших показателей качества
-                    и надежности!
-                  </p>
-                  <div class="hero__btns">
-                    <a class="hero__blue-btn" href="#!">Перейти в каталог</a>
-                    <a href="#!" class="white__btn">Задать звонок</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img class="slide__bg" src="images/home_slider_bg3.png" alt="" />
-              <div class="container">
-                <img class="human__img" src="images/human.png" alt="human img" />
-                <div class="hero__content">
-                  <h3 class="hero__title">
-                    Надежное оборудование – счастливый мужчина
-                  </h3>
-                  <p class="hero__desc">
-                    Мы предоставляем отличный сервис с быстрой доставкой в
-                    любой уголок страны!
-                  </p>
-                  <div class="hero__btns">
-                    <a class="hero__blue-btn" href="#!">Перейти в каталог</a>
-                    <a href="#!" class="white__btn">Задать звонок</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-btns">
-            <button class="button-prev button-prev1">
-              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.50003 13L1.77299 6.99999L6.50003 1" stroke="#1C1C1C" stroke-width="2"
-                  stroke-linecap="round" />
-              </svg>
-            </button>
-            <button class="button-next button-next1">
-              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.49997 13L6.22701 7.00001L1.49997 1.00002" stroke="#1C1C1C" stroke-width="2"
-                  stroke-linecap="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-scrollbar"></div>
-        </div>
-      </section>
-      <!-- home -->
-
-      <!-- Special offers -->
-      <section class="special__offers">
-        <div class="container">
-          <div class="title__box">
-            <h1 class="title">Спецпредложения</h1>
-            <div class="swiper-btns">
-              <button class="button-prev button-prev4">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.50003 13L1.77299 6.99999L6.50003 1" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round" />
+          <div class="menu__list">
+            <a href="#!">Акции</a>
+            <a href="#!">Новости</a>
+            <div class="accordion last">
+              <div class="accordion__header">
+                <span>Информация</span>
+                <svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.00008 1.50045L7 6.22661L12.9999 1.50045"
+                    stroke="#1C1C1C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
-              </button>
-              <button class="button-next button-next4">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.49997 13L6.22701 7.00001L1.49997 1.00002" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round" />
-                </svg>
-              </button>
+              </div>
+              <div class="accordion__content">
+                <ul>
+                  <li>
+                    <a href="#!">История бренда</a>
+                  </li>
+                  <li>
+                    <a href="#!">Доставка</a>
+                  </li>
+                  <li>
+                    <a href="#!">Оплата</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <a href="#!">Компания</a>
+            <a href="#!">Контакты</a>
           </div>
+
+          <ul class="header_bottom_right">
+            <li>
+              <a href="#">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.144047 0.810364C0.406634 0.416484 0.938806 0.31005 1.33269 0.572636L6.47552 4.00119C6.65823 4.123 6.78723 4.31029 6.83589 4.52442L9.54139 16.4286H19.6444L20.4847 13.5715H12.2857C11.8123 13.5715 11.4285 13.1877 11.4285 12.7143C11.4285 12.241 11.8123 11.8572 12.2857 11.8572H20.9889L21.9973 8.42865H12.2858C11.8124 8.42865 11.4286 8.04489 11.4286 7.57151C11.4286 7.09812 11.8124 6.71437 12.2858 6.71437H23.1429C23.413 6.71437 23.6673 6.84171 23.8291 7.058C23.991 7.27429 24.0414 7.55421 23.9652 7.81336L21.108 17.5276C21.0007 17.8924 20.666 18.1429 20.2857 18.1429H8.8572C8.457 18.1429 8.11006 17.866 8.02137 17.4757L5.24004 5.23785L0.381775 1.999C-0.012105 1.73642 -0.118539 1.20424 0.144047 0.810364ZM11.7142 21.5715C11.7142 22.676 10.8188 23.5714 9.71425 23.5714C8.60968 23.5714 7.71425 22.676 7.71425 21.5715C7.71425 20.4669 8.60968 19.5715 9.71425 19.5715C10.8188 19.5715 11.7142 20.4669 11.7142 21.5715ZM21.4285 21.5715C21.4285 22.676 20.5331 23.5714 19.4285 23.5714C18.3239 23.5714 17.4285 22.676 17.4285 21.5715C17.4285 20.4669 18.3239 19.5715 19.4285 19.5715C20.5331 19.5715 21.4285 20.4669 21.4285 21.5715Z"
+                    fill="#1C1C1C"
+                  ></path>
+                </svg>
+                <div class="circle">
+                  <p>99</p>
+                </div>
+              </a>
+              <span>Корзина</span>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </a>
+              <span>Сравнение</span>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  width="19"
+                  height="16"
+                  viewBox="0 0 19 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="14" height="2" fill="black"></rect>
+                  <rect
+                    width="9"
+                    height="2"
+                    transform="matrix(1 0 0 -1 0 9)"
+                    fill="black"
+                  ></rect>
+                  <rect
+                    width="8"
+                    height="2"
+                    transform="matrix(1 0 0 -1 11 9)"
+                    fill="black"
+                  ></rect>
+                  <rect
+                    width="8"
+                    height="2"
+                    transform="matrix(-4.37114e-08 1 1 4.37114e-08 14 4)"
+                    fill="black"
+                  ></rect>
+                  <rect y="14" width="14" height="2" fill="black"></rect>
+                </svg>
+              </a>
+              <span>Избранное</span>
+            </li>
+          </ul>
         </div>
-        <div class="main_container">
-          <div class="swiper product__swiper">
+      </header>
+      <!-- header -->
+
+      <!-- main -->
+      <main>
+        <!-- home -->
+        <section class="hero">
+          <div class="swiper hero__swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="card">
-                  <div class="status__box">Комплект</div>
-                  <img src="images/product__img-1.png" alt="product__img" />
-                  <p class="desc">Ручная-дуговая сварка ММА</p>
+                <img
+                  class="slide__bg"
+                  src="images/home_slider_bg1.png"
+                  alt=""
+                />
+                <div class="container">
+                  <img
+                    class="builder__img"
+                    src="images/builder.png"
+                    alt="builder img"
+                  />
+                  <div class="hero__content">
+                    <h3 class="hero__title">Всегда правильный выбор</h3>
+                    <p class="hero__desc">
+                      Лучшие ценовые предложения в интернете в каждой категории
+                      товаров!
+                    </p>
+                    <div class="hero__btns">
+                      <a class="hero__blue-btn" href="#!">Перейти в каталог</a>
+                      <a href="#!" class="white__btn">Задать звонок</a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="card">
-                  <div class="status__box">Комплект</div>
-                  <img src="images/product__img-2.png" alt="product__img" />
-                  <p class="desc">Полуавтоматическая сварка MiG – MAG</p>
+                <img
+                  class="slide__bg"
+                  src="images/home_slider_bg2.png"
+                  alt=""
+                />
+                <div class="container">
+                  <img
+                    class="svarka__img"
+                    src="images/svarka.png"
+                    alt="svarka img"
+                  />
+                  <div class="hero__content">
+                    <h3 class="hero__title">
+                      Индивидуальные предложения для юридических лиц
+                    </h3>
+                    <p class="hero__desc">
+                      Наши товары обладают одними из лучших показателей качества
+                      и надежности!
+                    </p>
+                    <div class="hero__btns">
+                      <a class="hero__blue-btn" href="#!">Перейти в каталог</a>
+                      <a href="#!" class="white__btn">Задать звонок</a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="card">
-                  <div class="status__box">Комплект</div>
-                  <img src="images/product__img-3.png" alt="product__img" />
-                  <p class="desc">Аргонодуговая сварка TiG</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="status__box">Комплект</div>
-                  <img src="images/product__img-4.png" alt="product__img" />
-                  <p class="desc">Плазменная резка</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-                  <div class="status__box">Комплект</div>
-                  <img src="images/product__img-1.png" alt="product__img" />
-                  <p class="desc">Ручная-дуговая сварка ММА</p>
+                <img
+                  class="slide__bg"
+                  src="images/home_slider_bg3.png"
+                  alt=""
+                />
+                <div class="container">
+                  <img
+                    class="human__img"
+                    src="images/human.png"
+                    alt="human img"
+                  />
+                  <div class="hero__content">
+                    <h3 class="hero__title">
+                      Надежное оборудование – счастливый мужчина
+                    </h3>
+                    <p class="hero__desc">
+                      Мы предоставляем отличный сервис с быстрой доставкой в
+                      любой уголок страны!
+                    </p>
+                    <div class="hero__btns">
+                      <a class="hero__blue-btn" href="#!">Перейти в каталог</a>
+                      <a href="#!" class="white__btn">Задать звонок</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="swiper-btns">
-              <button class="button-prev button-prev2">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.50003 13L1.77299 6.99999L6.50003 1" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round" />
+              <button class="button-prev button-prev1">
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.50003 13L1.77299 6.99999L6.50003 1"
+                    stroke="#1C1C1C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </button>
-              <button class="button-next button-next2">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.49997 13L6.22701 7.00001L1.49997 1.00002" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round" />
+              <button class="button-next button-next1">
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.49997 13L6.22701 7.00001L1.49997 1.00002"
+                    stroke="#1C1C1C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </button>
             </div>
+            <div class="swiper-pagination"></div>
             <div class="swiper-scrollbar"></div>
           </div>
-        </div>
-        <div class="container">
-          <div class="offers__cards">
-            <div class="offers__card">
-              <img class="offers__card-bg" src="images/benefit-bg-1.png" alt="benefit-bg" />
-              <div class="offers__card-icon">
-                <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M10 13C8.625 13 7.5 11.875 7.5 10.5C7.5 9.125 8.625 8 10 8C11.375 8 12.5 9.125 12.5 10.5C12.5 11.875 11.375 13 10 13ZM17.5 10.75C17.5 6.2125 14.1875 3 10 3C5.8125 3 2.5 6.2125 2.5 10.75C2.5 13.675 4.9375 17.55 10 22.175C15.0625 17.55 17.5 13.675 17.5 10.75ZM10 0.5C15.25 0.5 20 4.525 20 10.75C20 14.9 16.6625 19.8125 10 25.5C3.3375 19.8125 0 14.9 0 10.75C0 4.525 4.75 0.5 10 0.5Z"
-                    fill="white" />
-                </svg>
-              </div>
-              <h4 class="offers__card-title">Доставка по всей России</h4>
-              <p class="offers__card-desc">
-                Мы предоставляем отличный сервис с быстрой доставкой в любой
-                уголок страны!
-              </p>
-            </div>
-            <div class="offers__card">
-              <img class="offers__card-bg" src="images/benefit-bg-2.png" alt="benefit-bg" />
-              <div class="offers__card-icon">
-                <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M18.9548 15.2727V19.8182H16.682V15.2727H18.9548ZM5.3184 15.2727V19.8182H4.18204C3.55704 19.8182 3.04568 19.3068 3.04568 18.6818V15.2727H5.3184ZM11.0002 0.5C5.35249 0.5 0.772949 5.07955 0.772949 10.7273V18.6818C0.772949 20.5682 2.29568 22.0909 4.18204 22.0909H7.59113V13H3.04568V10.7273C3.04568 6.32955 6.60249 2.77273 11.0002 2.77273C15.3979 2.77273 18.9548 6.32955 18.9548 10.7273V13H14.4093V22.0909H18.9548V23.2273H11.0002V25.5H17.8184C19.7048 25.5 21.2275 23.9773 21.2275 22.0909V10.7273C21.2275 5.07955 16.6479 0.5 11.0002 0.5Z"
-                    fill="white" />
-                </svg>
-              </div>
-              <h4 class="offers__card-title">Служба клиентской поддержки</h4>
-              <p class="offers__card-desc">
-                Наши товары обладают одними из лучших показателей качества и
-                надежности!
-              </p>
-            </div>
-            <div class="offers__card">
-              <img class="offers__card-bg" src="images/benefit-bg-3.png" alt="benefit-bg" />
-              <div class="offers__card-icon">
-                <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M21.3333 15.7708V14.7291C22.4792 14.7291 23.4062 13.7916 23.4062 12.6458L23.4167 2.22909C23.4167 1.08325 22.4792 0.145752 21.3333 0.145752H4.66667C3.52083 0.145752 2.58333 1.08325 2.58333 2.22909V12.6458C2.58333 13.7916 3.52083 14.7291 4.66667 14.7291V15.7708H0.5V17.8541H25.5V15.7708H21.3333ZM4.66667 2.22909H21.3333V12.6458H4.66667V2.22909Z"
-                    fill="white" />
-                </svg>
-              </div>
-              <h4 class="offers__card-title">Уникальные предложения</h4>
-              <p class="offers__card-desc">
-                Лучшие ценовые предложения в интернете в каждой категории
-                товаров!
-              </p>
-            </div>
-            <div class="offers__card">
-              <img class="offers__card-bg" src="images/benefit-bg-4.png" alt="benefit-bg" />
-              <div class="offers__card-icon">
-                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M25.5 4.475L11.2375 18.75L5.9375 13.45L7.7 11.6875L11.2375 15.225L23.7375 2.725L25.5 4.475ZM22.7375 10.775C22.9 11.4875 23 12.2375 23 13C23 18.525 18.525 23 13 23C7.475 23 3 18.525 3 13C3 7.475 7.475 3 13 3C14.975 3 16.8 3.575 18.35 4.5625L20.15 2.7625C18.125 1.3375 15.6625 0.5 13 0.5C6.1 0.5 0.5 6.1 0.5 13C0.5 19.9 6.1 25.5 13 25.5C19.9 25.5 25.5 19.9 25.5 13C25.5 11.5125 25.225 10.0875 24.75 8.7625L22.7375 10.775Z"
-                    fill="white" />
-                </svg>
-              </div>
-              <h4 class="offers__card-title">Бесплатная доставка</h4>
-              <p class="offers__card-desc">
-                При предоплате или полной оплате на сайте
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Special offers -->
+        </section>
+        <!-- home -->
 
-      <!-- help choos -->
-      <section class="help__choos">
-        <div class="main_container">
+        <!-- Special offers -->
+        <section class="special__offers">
           <div class="container">
-            <div class="help__choos-content">
-              <h1 class="title">Поможем подобрать</h1>
-              <p class="desc">
-                Покупка на сайте Маркет Аврора - это всегда правильное
-                решение! Вы можете заказать сразу несколько товаров и оформить
-                доставку в любой населенный пункт России с возможностью
-                расчета в любой форме!
-              </p>
-              <div class="choos__bts">
-                <a class="green__btn" href="#!">Перейти в каталог</a>
-                <a class="white__btn" href="#!">Консультация</a>
-              </div>
-            </div>
-            <img class="operator__img" src="images/operator.png" alt="operator img" />
-            <img class="media__operator-img" src="images/media-operator.png" alt="operator img" />
-          </div>
-        </div>
-      </section>
-      <!-- help choos -->
-
-      <!-- products -->
-      <section class="products">
-        <div class="container">
-          <div class="title__box">
-            <h1 class="title">Продукция</h1>
-            <div class="swiper-btns">
-              <button class="button-prev button-prev7">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.50003 13L1.77299 6.99999L6.50003 1" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round"></path>
-                </svg>
-              </button>
-              <button class="button-next button-next7">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.49997 13L6.22701 7.00001L1.49997 1.00002" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="swiper-container products__swiper">
-            <div class="products__boxes swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__box-bg" src="images/img-category-bg1.png" alt="" />
-                  <img class="product__img" src="images/category-0.png" alt="product img" />
-                  <p class="product__desc">Сварочное оборудование</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__box-bg" src="images/category-bg2.png" alt="" />
-                  <img class="product__img" src="images/category-1.png" alt="product img" />
-                  <p class="product__desc">Генераторы</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__box-bg" src="images/category-bg3.png" alt="" />
-                  <img class="product__img" src="images/category-2.png" alt="product img" />
-                  <p class="product__desc">Компрессоры</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__box-bg" src="images/category-bg4.png" alt="" />
-                  <img class="product__img" src="images/category-3.png" alt="product img" />
-                  <p class="product__desc">Культиваторы и Мотоблоки</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__img" src="images/category-4.png" alt="product img" />
-                  <p class="product__desc">Тепловая техника</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__box-bg" src="images/category-bg5.png" alt="" />
-                  <img class="product__img" src="images/category-5.png" alt="product img" />
-                  <p class="product__desc">Маски для сварки</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__img" src="images/category-6.png" alt="product img" />
-                  <p class="product__desc">Пуско-зарядные устройства</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product__box">
-                  <img class="product__img" src="images/category-7.png" alt="product img" />
-                  <p class="product__desc">Вся продукция</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-scrollbar"></div>
-          </div>
-        </div>
-      </section>
-      <!-- products -->
-
-      <!-- history__brand -->
-      <section class="history__brand">
-        <div class="main_container">
-          <img class="history__brand-bg" src="images/history-bg.png" alt="" />
-          <img class="history__brand-bg" src="images/history-bg2.png" alt="" />
-          <div class="container">
-            <h2 class="company__name">Aurora pro</h2>
-            <h2 class="company__name">riland</h2>
-            <img class="aurora__logo" src="images/logo-aurora-pro.png" alt="logo-aurora-pro" />
-            <img class="riland__logo aurora__logo" src="images/img-logo-riland.png" alt="logo-aurora-pro" />
-            <h1 class="title">История бренда</h1>
-            <div class="history__brand-content">
-              <div class="tab__header-items">
-                <h5 class="tab__item">Aurora Pro</h5>
-                <h5 class="tab__item active">Riland</h5>
-              </div>
-              <div class="tab__content">
-                <p class="desc">
-                  В 2012 году к группе компаний Аврора присоединился
-                  производитель высококачественного оборудования – компания №1
-                  в Китае по производству инверторной сварочной техники -
-                  Riland!
-                </p>
-                <p class="desc">
-                  Новый ассортимент продукции относится к профессиональному
-                  классу, поэтому данное направление выделено отдельным
-                  брендом – Aurora Pro.
-                </p>
-                <a class="white__btn" href="#!">Перейти в каталог</a>
-              </div>
-              <div class="tab__content">
-                <p class="desc">
-                  Компания Риланд прошла долгий путь становления одной из
-                  ведущих компаний-производителей сварочного и режущего
-                  оборудования в Китае и имеет богатую историю развития.
-                </p>
-                <p class="desc">
-                  В 1993 году Киу Гуанг (Саймон) основал компанию Riland Power
-                  Source technology Co., Ltd  в городе Шенжен и запустил
-                  производство и экспорт инверторного сварочного и режущего
-                  оборудования Риланд.
-                </p>
-                <a class="white__btn" href="#!">Перейти в каталог</a>
+            <div class="title__box">
+              <h1 class="title">Спецпредложения</h1>
+              <div class="swiper-btns">
+                <button class="button-prev button-prev4">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.50003 13L1.77299 6.99999L6.50003 1"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+                <button class="button-next button-next4">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.49997 13L6.22701 7.00001L1.49997 1.00002"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- history__brand -->
-
-      <!-- watche__product -->
-      <section class="watche__product">
-        <div class="container">
-          <div class="title__box">
-            <h1 class="title">Вы смотрели</h1>
-            <div class="swiper-btns">
-              <button class="button-prev button-prev3">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.50003 13L1.77299 6.99999L6.50003 1" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round"></path>
-                </svg>
-              </button>
-              <button class="button-next button-next3">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.49997 13L6.22701 7.00001L1.49997 1.00002" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="relative__box">
-            <div class="swiper watche__product-swiper">
+          <div class="main_container">
+            <div class="swiper-container product__swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="card">
+                    <a href="#!">
+                      <div class="status__box">Комплект</div>
+                      <img src="images/product__img-1.png" alt="product__img" />
+                      <p class="desc">Ручная-дуговая сварка ММА</p>
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="card">
+                    <a href="#!">
+                      <div class="status__box">Комплект</div>
+                      <img src="images/product__img-2.png" alt="product__img" />
+                      <p class="desc">Полуавтоматическая сварка MiG – MAG</p>
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="card">
+                    <a href="#!">
+                      <div class="status__box">Комплект</div>
+                      <img src="images/product__img-3.png" alt="product__img" />
+                      <p class="desc">Аргонодуговая сварка TiG</p>
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="card">
+                    <a href="#!">
+                      <div class="status__box">Комплект</div>
+                      <img src="images/product__img-4.png" alt="product__img" />
+                      <p class="desc">Плазменная резка</p>
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="card">
+                    <a href="#!">
+                      <div class="status__box">Комплект</div>
+                      <img src="images/product__img-1.png" alt="product__img" />
+                      <p class="desc">Ручная-дуговая сварка ММА</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-btns">
+                <button class="button-prev button-prev2">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.50003 13L1.77299 6.99999L6.50003 1"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+                <button class="button-next button-next2">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.49997 13L6.22701 7.00001L1.49997 1.00002"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="offers__cards">
+              <div class="offers__card">
+                <img
+                  class="offers__card-bg"
+                  src="images/benefit-bg-1.png"
+                  alt="benefit-bg"
+                />
+                <div class="offers__card-icon">
+                  <svg
+                    width="20"
+                    height="26"
+                    viewBox="0 0 20 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 13C8.625 13 7.5 11.875 7.5 10.5C7.5 9.125 8.625 8 10 8C11.375 8 12.5 9.125 12.5 10.5C12.5 11.875 11.375 13 10 13ZM17.5 10.75C17.5 6.2125 14.1875 3 10 3C5.8125 3 2.5 6.2125 2.5 10.75C2.5 13.675 4.9375 17.55 10 22.175C15.0625 17.55 17.5 13.675 17.5 10.75ZM10 0.5C15.25 0.5 20 4.525 20 10.75C20 14.9 16.6625 19.8125 10 25.5C3.3375 19.8125 0 14.9 0 10.75C0 4.525 4.75 0.5 10 0.5Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <h4 class="offers__card-title">Доставка по всей России</h4>
+                <p class="offers__card-desc">
+                  Мы предоставляем отличный сервис с быстрой доставкой в любой
+                  уголок страны!
+                </p>
+              </div>
+              <div class="offers__card">
+                <img
+                  class="offers__card-bg"
+                  src="images/benefit-bg-2.png"
+                  alt="benefit-bg"
+                />
+                <div class="offers__card-icon">
+                  <svg
+                    width="22"
+                    height="26"
+                    viewBox="0 0 22 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.9548 15.2727V19.8182H16.682V15.2727H18.9548ZM5.3184 15.2727V19.8182H4.18204C3.55704 19.8182 3.04568 19.3068 3.04568 18.6818V15.2727H5.3184ZM11.0002 0.5C5.35249 0.5 0.772949 5.07955 0.772949 10.7273V18.6818C0.772949 20.5682 2.29568 22.0909 4.18204 22.0909H7.59113V13H3.04568V10.7273C3.04568 6.32955 6.60249 2.77273 11.0002 2.77273C15.3979 2.77273 18.9548 6.32955 18.9548 10.7273V13H14.4093V22.0909H18.9548V23.2273H11.0002V25.5H17.8184C19.7048 25.5 21.2275 23.9773 21.2275 22.0909V10.7273C21.2275 5.07955 16.6479 0.5 11.0002 0.5Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <h4 class="offers__card-title">Служба клиентской поддержки</h4>
+                <p class="offers__card-desc">
+                  Наши товары обладают одними из лучших показателей качества и
+                  надежности!
+                </p>
+              </div>
+              <div class="offers__card">
+                <img
+                  class="offers__card-bg"
+                  src="images/benefit-bg-3.png"
+                  alt="benefit-bg"
+                />
+                <div class="offers__card-icon">
+                  <svg
+                    width="26"
+                    height="18"
+                    viewBox="0 0 26 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21.3333 15.7708V14.7291C22.4792 14.7291 23.4062 13.7916 23.4062 12.6458L23.4167 2.22909C23.4167 1.08325 22.4792 0.145752 21.3333 0.145752H4.66667C3.52083 0.145752 2.58333 1.08325 2.58333 2.22909V12.6458C2.58333 13.7916 3.52083 14.7291 4.66667 14.7291V15.7708H0.5V17.8541H25.5V15.7708H21.3333ZM4.66667 2.22909H21.3333V12.6458H4.66667V2.22909Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <h4 class="offers__card-title">Уникальные предложения</h4>
+                <p class="offers__card-desc">
+                  Лучшие ценовые предложения в интернете в каждой категории
+                  товаров!
+                </p>
+              </div>
+              <div class="offers__card">
+                <img
+                  class="offers__card-bg"
+                  src="images/benefit-bg-4.png"
+                  alt="benefit-bg"
+                />
+                <div class="offers__card-icon">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.5 4.475L11.2375 18.75L5.9375 13.45L7.7 11.6875L11.2375 15.225L23.7375 2.725L25.5 4.475ZM22.7375 10.775C22.9 11.4875 23 12.2375 23 13C23 18.525 18.525 23 13 23C7.475 23 3 18.525 3 13C3 7.475 7.475 3 13 3C14.975 3 16.8 3.575 18.35 4.5625L20.15 2.7625C18.125 1.3375 15.6625 0.5 13 0.5C6.1 0.5 0.5 6.1 0.5 13C0.5 19.9 6.1 25.5 13 25.5C19.9 25.5 25.5 19.9 25.5 13C25.5 11.5125 25.225 10.0875 24.75 8.7625L22.7375 10.775Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <h4 class="offers__card-title">Бесплатная доставка</h4>
+                <p class="offers__card-desc">
+                  При предоплате или полной оплате на сайте
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Special offers -->
+
+        <!-- help choos -->
+        <section class="help__choos">
+          <div class="main_container">
+            <div class="container">
+              <div class="help__choos-content">
+                <h1 class="title">Поможем подобрать</h1>
+                <p class="desc">
+                  Покупка на сайте Маркет Аврора - это всегда правильное
+                  решение! Вы можете заказать сразу несколько товаров и оформить
+                  доставку в любой населенный пункт России с возможностью
+                  расчета в любой форме!
+                </p>
+                <div class="choos__bts">
+                  <a class="green__btn" href="#!">Перейти в каталог</a>
+                  <a class="white__btn" href="#!">Консультация</a>
+                </div>
+              </div>
+              <img
+                class="operator__img"
+                src="images/operator.png"
+                alt="operator img"
+              />
+              <img
+                class="media__operator-img"
+                src="images/medai-operator-bg.png"
+                alt="operator img"
+              />
+              <img
+                class="media__operator-img-two"
+                src="images/media-operator-img-2.png"
+                alt="operator__img"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- help choos -->
+
+        <!-- products -->
+        <section class="products">
+          <div class="container">
+            <div class="title__box">
+              <h1 class="title">Продукция</h1>
+              <div class="swiper-btns">
+                <button class="button-prev button-prev7">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.50003 13L1.77299 6.99999L6.50003 1"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </button>
+                <button class="button-next button-next7">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.49997 13L6.22701 7.00001L1.49997 1.00002"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="swiper-container products__swiper">
+              <div class="products__boxes swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product__box">
+                    <img
+                      class="product__box-bg"
+                      src="images/img-category-bg1.png"
+                      alt=""
+                    />
+                    <img
+                      class="product__img"
+                      src="images/category-0.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Сварочное оборудование</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="product__box">
+                    <img
+                      class="product__box-bg"
+                      src="images/category-bg2.png"
+                      alt=""
+                    />
+                    <img
+                      class="product__img"
+                      src="images/category-1.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Генераторы</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="product__box">
+                    <img
+                      class="product__box-bg"
+                      src="images/category-bg3.png"
+                      alt=""
+                    />
+                    <img
+                      class="product__img"
+                      src="images/category-2.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Компрессоры</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="watche__product-card">
-                    <img src="images/product__img-1.png" alt="product img" />
-                    <span class="product__price">999 000 руб.</span>
-                    <p class="product__desc">
-                      Сварочный полуавтомат AuroraPRO OVERMAN 200
-                    </p>
+                  <div class="product__box">
+                    <img
+                      class="product__box-bg"
+                      src="images/category-bg4.png"
+                      alt=""
+                    />
+                    <img
+                      class="product__img"
+                      src="images/category-3.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Культиваторы и Мотоблоки</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product__box">
+                    <img
+                      class="product__img"
+                      src="images/category-4.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Тепловая техника</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product__box">
+                    <img
+                      class="product__box-bg"
+                      src="images/category-bg5.png"
+                      alt=""
+                    />
+                    <img
+                      class="product__img"
+                      src="images/category-5.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Маски для сварки</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product__box">
+                    <img
+                      class="product__img"
+                      src="images/category-6.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Пуско-зарядные устройства</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product__box">
+                    <img
+                      class="product__img"
+                      src="images/category-7.png"
+                      alt="product img"
+                    />
+                    <p class="product__desc">Вся продукция</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-scrollbar"></div>
             </div>
-            <div class="swiper-btns">
-              <button class="button-prev button-prev3">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.50003 13L1.77299 6.99999L6.50003 1" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round" />
+          </div>
+        </section>
+        <!-- products -->
+
+        <!-- history__brand -->
+        <section class="history__brand">
+          <div class="main_container">
+            <img class="history__brand-bg" src="images/history-bg.png" alt="" />
+            <img
+              class="history__brand-bg"
+              src="images/history-bg2.png"
+              alt=""
+            />
+            <div class="container">
+              <h2 class="company__name">Aurora pro</h2>
+              <h2 class="company__name">riland</h2>
+              <img
+                class="aurora__logo"
+                src="images/logo-aurora-pro.png"
+                alt="logo-aurora-pro"
+              />
+              <img
+                class="riland__logo aurora__logo"
+                src="images/img-logo-riland.png"
+                alt="logo-aurora-pro"
+              />
+              <h1 class="title">История бренда</h1>
+              <div class="history__brand-content">
+                <div class="tab__header-items">
+                  <h5 class="tab__item">Aurora Pro</h5>
+                  <h5 class="tab__item active">Riland</h5>
+                </div>
+                <div class="tab__content">
+                  <p class="desc">
+                    В 2012 году к группе компаний Аврора присоединился
+                    производитель высококачественного оборудования – компания №1
+                    в Китае по производству инверторной сварочной техники -
+                    Riland!
+                  </p>
+                  <p class="desc">
+                    Новый ассортимент продукции относится к профессиональному
+                    классу, поэтому данное направление выделено отдельным
+                    брендом – Aurora Pro.
+                  </p>
+                  <a class="white__btn" href="#!">Перейти в каталог</a>
+                </div>
+                <div class="tab__content">
+                  <p class="desc">
+                    Компания Риланд прошла долгий путь становления одной из
+                    ведущих компаний-производителей сварочного и режущего
+                    оборудования в Китае и имеет богатую историю развития.
+                  </p>
+                  <p class="desc">
+                    В 1993 году Киу Гуанг (Саймон) основал компанию Riland Power
+                    Source technology Co., Ltd  в городе Шенжен и запустил
+                    производство и экспорт инверторного сварочного и режущего
+                    оборудования Риланд.
+                  </p>
+                  <a class="white__btn" href="#!">Перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- history__brand -->
+
+        <!-- watche__product -->
+        <section class="watche__product">
+          <div class="container">
+            <div class="title__box">
+              <h1 class="title">Вы смотрели</h1>
+              <div class="swiper-btns">
+                <button class="button-prev button-prev3">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.50003 13L1.77299 6.99999L6.50003 1"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </button>
+                <button class="button-next button-next3">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.49997 13L6.22701 7.00001L1.49997 1.00002"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="relative__box">
+              <div class="swiper watche__product-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="watche__product-card">
+                      <img src="images/product__img-1.png" alt="product img" />
+                      <span class="product__price">999 000 руб.</span>
+                      <p class="product__desc">
+                        Сварочный полуавтомат AuroraPRO OVERMAN 200
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+              <div class="swiper-btns">
+                <button class="button-prev button-prev3">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.50003 13L1.77299 6.99999L6.50003 1"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+                <button class="button-next button-next3">
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.49997 13L6.22701 7.00001L1.49997 1.00002"
+                      stroke="#1C1C1C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- watche__product -->
+      </main>
+      <!-- main -->
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <img src="images/logo/header_logo.svg" alt="logo" />
+          <div class="row">
+            <div class="col accordion">
+              <div class="footer__title-box accordion__header">
+                <h4 class="footer__title">Интернет-магазин</h4>
+                <img
+                  class="down__icon"
+                  src="images/icons/down_icon.svg"
+                  alt="down_icon"
+                />
+              </div>
+              <ul class="accordion__content">
+                <li>
+                  <a href="#!">Каталог</a>
+                </li>
+                <li>
+                  <a href="#!">Акции</a>
+                </li>
+                <li>
+                  <a href="#!">Бренды</a>
+                </li>
+                <li>
+                  <a href="#!">Услуги</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col accordion">
+              <div class="footer__title-box accordion__header">
+                <h4 class="footer__title">Компания</h4>
+                <img
+                  class="down__icon"
+                  src="images/icons/down_icon.svg"
+                  alt="down_icon"
+                />
+              </div>
+              <ul class="accordion__content">
+                <li>
+                  <a href="#!">О компании</a>
+                </li>
+                <li>
+                  <a href="#!">Лицензии</a>
+                </li>
+                <li>
+                  <a href="#!">Отзывы</a>
+                </li>
+                <li>
+                  <a href="#!">Документы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col accordion">
+              <div class="footer__title-box accordion__header">
+                <h4 class="footer__title">Информация</h4>
+                <img
+                  class="down__icon"
+                  src="images/icons/down_icon.svg"
+                  alt="down_icon"
+                />
+              </div>
+              <ul class="accordion__content">
+                <li>
+                  <a href="#!">Реквизиты</a>
+                </li>
+                <li>
+                  <a href="#!">Магазины</a>
+                </li>
+                <li>
+                  <a href="#!">Возможности</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col accordion">
+              <div class="footer__title-box accordion__header">
+                <h4 class="footer__title">Помощь</h4>
+                <img
+                  class="down__icon"
+                  src="images/icons/down_icon.svg"
+                  alt="down_icon"
+                />
+              </div>
+              <ul class="accordion__content">
+                <li>
+                  <a href="#!">Условия оплаты</a>
+                </li>
+                <li>
+                  <a href="#!">Условия доставки</a>
+                </li>
+                <li>
+                  <a href="#!">Гарантия на товар</a>
+                </li>
+                <li>
+                  <a href="#!">Вопрос-ответ</a>
+                </li>
+                <li>
+                  <a href="#!">Обзоры</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="footer__title-box">
+                <h4 class="footer__title">Контакты</h4>
+              </div>
+              <div class="number__box">
+                <a class="number" href="#!">+7 (846) 211 70 05</a>
+                <svg
+                  width="7"
+                  height="6"
+                  viewBox="0 0 7 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z" fill="#1C1C1C" />
                 </svg>
-              </button>
-              <button class="button-next button-next3">
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.49997 13L6.22701 7.00001L1.49997 1.00002" stroke="#1C1C1C" stroke-width="2"
-                    stroke-linecap="round" />
-                </svg>
-              </button>
+              </div>
+              <ul>
+                <li>
+                  <a href="#!">hello@auro-market.ru</a>
+                </li>
+                <li>
+                  <a href="#!"
+                    >г. Москва, Востряковский <br />
+                    проезд 10б строение 8</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>© 2024 Интернет-магазин Аврора: сварочное оборудование.</p>
+            <div class="right__box">
+              <div class="flex__box">
+                <a href="#!">Конфиденциальность</a>
+                <a href="#!">Оферта</a>
+              </div>
+              <a href="#!">Разработчик</a>
             </div>
           </div>
         </div>
-      </section>
-      <!-- watche__product -->
-    </main>
-    <!-- main -->
+      </footer>
+      <!-- footer -->
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="container">
-        <img src="images/logo/header_logo.svg" alt="logo" />
-        <div class="row">
-          <div class="col accordion">
-            <div class="footer__title-box accordion__header">
-              <h4 class="footer__title">Интернет-магазин</h4>
-              <img class="down__icon" src="images/icons/down_icon.svg" alt="down_icon" />
-            </div>
-            <ul class="accordion__content">
-              <li>
-                <a href="#!">Каталог</a>
-              </li>
-              <li>
-                <a href="#!">Акции</a>
-              </li>
-              <li>
-                <a href="#!">Бренды</a>
-              </li>
-              <li>
-                <a href="#!">Услуги</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col accordion">
-            <div class="footer__title-box accordion__header">
-              <h4 class="footer__title">Компания</h4>
-              <img class="down__icon" src="images/icons/down_icon.svg" alt="down_icon" />
-            </div>
-            <ul class="accordion__content">
-              <li>
-                <a href="#!">О компании</a>
-              </li>
-              <li>
-                <a href="#!">Лицензии</a>
-              </li>
-              <li>
-                <a href="#!">Отзывы</a>
-              </li>
-              <li>
-                <a href="#!">Документы</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col accordion">
-            <div class="footer__title-box accordion__header">
-              <h4 class="footer__title">Информация</h4>
-              <img class="down__icon" src="images/icons/down_icon.svg" alt="down_icon" />
-            </div>
-            <ul class="accordion__content">
-              <li>
-                <a href="#!">Реквизиты</a>
-              </li>
-              <li>
-                <a href="#!">Магазины</a>
-              </li>
-              <li>
-                <a href="#!">Возможности</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col accordion">
-            <div class="footer__title-box accordion__header">
-              <h4 class="footer__title">Помощь</h4>
-              <img class="down__icon" src="images/icons/down_icon.svg" alt="down_icon" />
-            </div>
-            <ul class="accordion__content">
-              <li>
-                <a href="#!">Условия оплаты</a>
-              </li>
-              <li>
-                <a href="#!">Условия доставки</a>
-              </li>
-              <li>
-                <a href="#!">Гарантия на товар</a>
-              </li>
-              <li>
-                <a href="#!">Вопрос-ответ</a>
-              </li>
-              <li>
-                <a href="#!">Обзоры</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <div class="footer__title-box">
-              <h4 class="footer__title">Контакты</h4>
-            </div>
-            <div class="number__box">
-              <a class="number" href="#!">+7 (846) 211 70 05</a>
-              <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.5 5.5L0 0.5L7 0.500001L3.5 5.5Z" fill="#1C1C1C" />
-              </svg>
-            </div>
-            <ul>
-              <li>
-                <a href="#!">hello@auro-market.ru</a>
-              </li>
-              <li>
-                <a href="#!">г. Москва, Востряковский <br />
-                  проезд 10б строение 8</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <a href="#" class="top__btn">
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.00008 1.50045L7 6.22661L12.9999 1.50045"
+            stroke="#1C1C1C"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </a>
+    </div>
 
-        <div class="footer__bottom">
-          <p>© 2024 Интернет-магазин Аврора: сварочное оборудование.</p>
-          <div class="right__box">
-            <div class="flex__box">
-              <a href="#!">Конфиденциальность</a>
-              <a href="#!">Оферта</a>
-            </div>
-            <a href="#!">Разработчик</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer -->
-
-    <a href="#" class="top__btn">
-      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.00008 1.50045L7 6.22661L12.9999 1.50045" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" />
-      </svg>
-    </a>
-  </div>
-
-  <!-- Swiper js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Swiper js -->
-  <!-- js file -->
-  <script src="./js/main.js"></script>
-  <!-- js file -->
-</body>
-
+    <!-- Swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper js -->
+    <!-- js file -->
+    <script src="./js/main.js"></script>
+    <!-- js file -->
+  </body>
 </html>

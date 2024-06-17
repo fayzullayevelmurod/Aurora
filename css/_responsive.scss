@@ -1,3 +1,6 @@
+.media__operator-img-two {
+  display: none;
+}
 @media screen and (max-width: 1600px) {
   .container {
     max-width: 100%;
@@ -9,8 +12,49 @@
     padding-right: 24px;
   }
 }
-
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1360px) {
+  .help__choos .operator__img {
+    max-width: 30%;
+    height: 500px;
+  }
+  .special__offers .offers__cards {
+    max-width: 100%;
+    margin-bottom: 100px;
+  }
+  .products .products__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    & > div {
+      flex: 1 1 300px;
+    }
+  }
+  .products .products__boxes .product__box {
+    height: 348px;
+  }
+  .history__brand-content {
+    max-width: 100%;
+  }
+  .history__brand .company__name {
+    font-size: 64px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .help__choos .operator__img {
+    height: 356px;
+  }
+  .special__offers .offers__cards {
+    margin: 64px 0;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .history__brand .tab__header-items {
+    padding-bottom: 16px;
+  }
+  .history__brand .title {
+    font-size: 32px;
+  }
   header {
     border-bottom: 1px solid #dee2e7;
     background: #f7fafc;
@@ -23,7 +67,21 @@
     display: none;
   }
   header .header_bottom_right {
-    gap: 30px;
+    gap: 16px;
+
+    li {
+      &:first-child {
+        order: -3;
+        transform: rotate(270deg);
+      }
+      &:nth-child(3) {
+        order: -1;
+      }
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: none;
+      }
+    }
   }
   header .header_container {
     flex-direction: row;
@@ -93,7 +151,7 @@
     background: #f7fafc;
     padding-top: 24px;
   }
-  .special__offers .swiper .swiper-btns {
+  .special__offers .swiper-container .swiper-btns {
     display: none;
   }
   .special__offers .swiper-scrollbar {
@@ -101,8 +159,8 @@
     bottom: 0;
     top: auto;
     height: 2px;
-    width: 101%;
-    margin-left: -7px;
+    width: 115%;
+    margin: 0 -35px;
     display: block;
     .swiper-scrollbar-drag {
       background: #0d6efd;
@@ -120,18 +178,20 @@
   .special__offers .offers__cards {
     display: grid;
     grid-template-columns: auto auto;
+    max-width: 100%;
   }
   .help__choos .operator__img {
     width: 265px;
-    height: 356px;
+    height: 290px;
+    max-width: 100%;
   }
 
   .help__choos .desc {
     font-size: 20px;
     line-height: 30px;
   }
-  .help__choos-content {
-    max-width: 433px;
+  .help__choos .container {
+    padding: 24px 0;
   }
   .help__choos {
     margin: 0 24px;
@@ -144,6 +204,7 @@
     display: flex;
     align-items: stretch;
     gap: 0;
+    flex-wrap: nowrap;
   }
   .products .swiper-backface-hidden .swiper-slide {
     height: unset;
@@ -163,6 +224,7 @@
   }
   .history__brand .tab__header-items h5 {
     font-size: 24px;
+    line-height: 36px;
   }
   .history__brand .tab__header-items {
     gap: 16px;
@@ -230,7 +292,7 @@
     padding-bottom: 0;
   }
   .watche__product .swiper {
-    padding: 24px 0;
+    padding: 24px 4px;
   }
   .watche__product {
     padding: 24px 0 0 0;
@@ -625,6 +687,12 @@
   .news__inner {
     padding-bottom: 24px;
   }
+  .help__choos .main_container {
+    z-index: 2;
+    position: relative;
+    background-image: url(../images/help__choos-bg.png);
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -695,30 +763,26 @@
   .help__choos .operator__img {
     display: none;
   }
+  .help__choos-content {
+    max-width: 100%;
+  }
   .help__choos .media__operator-img {
     display: block;
     z-index: -1;
-    width: 267.72px;
-    height: 478px;
-    right: 0;
+    width: 243px;
+    height: 290px;
+    right: 15px;
     position: absolute;
     bottom: 0;
-    display: none;
   }
   .help__choos .container {
     position: unset;
-  }
-  .help__choos .main_container {
-    z-index: 2;
-    position: relative;
-    background: url(../images/medai-operator-bg.png) no-repeat;
-    background-size: cover;
+    padding: 24px 0;
   }
   .help__choos .choos__bts {
-    flex-direction: column;
-    row-gap: 24px;
+    gap: 24px;
     a {
-      width: 100%;
+      width: fit-content;
       text-align: center;
     }
   }
@@ -815,5 +879,29 @@
   }
   .date__box {
     gap: 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .media__operator-img-two {
+    display: block;
+    z-index: -1;
+    width: 192px;
+    height: 478px;
+    right: 0;
+    position: absolute;
+    bottom: -1px;
+  }
+  .help__choos .main_container {
+    overflow: hidden;
+  }
+  .help__choos .media__operator-img {
+    display: none;
+  }
+  .help__choos .choos__bts {
+    flex-direction: column;
+    a {
+      width: 100%;
+    }
   }
 }
